@@ -1,5 +1,6 @@
 
 <div id="backToTop"><p>TOP</p></div>
+<div id="modalBack" *ngIf="isModal"> </div>
 
 <header class="header">
         <div class="logo">
@@ -16,5 +17,5 @@
 </header> 
 
 
-<router-outlet></router-outlet>
+<router-outlet (onModal)="chageState($event)"></router-outlet>
 

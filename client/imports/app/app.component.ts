@@ -7,4 +7,12 @@ import styles from './app.component.css';
   template,
   styles
 })
-export class AppComponent  { name = 'Angular'; }
+export class AppComponent  {
+  
+  name = 'Angular';
+  isModal: boolean = false;
+
+  changeState(e: event) {
+    console.log('AppComponent', e);
+  }
+}

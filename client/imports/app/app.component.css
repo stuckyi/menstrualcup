@@ -469,3 +469,12 @@ html:lang(ko){
   line-height: 30px;
   line-height: 17.6470588rem; 
 }
+
+#modalBack {
+  width: 1200px;
+  height:100%;
+  
+  margin : 0 auto;
+  background-color: magenta;
+
+}

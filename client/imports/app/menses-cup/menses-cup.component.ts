@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { Index } from '../index.model';
@@ -26,7 +26,20 @@ import gridStyle from '../../../../public/typo.css';
 export class MensesCupComponent {
         currentSection: string = '생리컵';
         selectedIndex: Index;
-
+        
+        
+        @Output() onModal: EventEmitter<any> = new EventEmitter();
+    
+        changeState(e: event) {
+            if (e) {
+                this.onModal.emit(e);
+                console.log('modal true', e);    
+            } else {
+                this.onModal.emit(e);
+                console.log('modal false', e);
+            }
+            
+        }
         IndexList = [
             { id:0, name: '생리컵이란', name_eng: 'definition', endScroll: '#definition' },
             { id:1, name: '작동 원리', name_eng: 'principle', endScroll: '#principle' },

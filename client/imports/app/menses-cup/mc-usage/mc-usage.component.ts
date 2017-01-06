@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 import { ModalComponent } from '../../interaction/modal/modal.component';
 
 import gridStyles from '../../../../../public/typo.css';
@@ -16,6 +16,10 @@ export class McUsageComponent {
         modalTest: string = 'tadkim';
         cardModel: any;
         fold1_mouseover: boolean = true;
+
+        @Output() onModal: EventEmitter<any> = new EventEmitter();
+
+        
         
 
 
@@ -29,6 +33,7 @@ export class McUsageComponent {
         }
         onClose(): void {
                 this.modalState = false;
+                this.onModal.emit(this.modalState); //for eventemiit
         }
 
         onCard(e): void{
@@ -36,6 +41,7 @@ export class McUsageComponent {
                 //현재 선택한 fold 카드의 className을 가져온다.
                 this.selectedFold =  e.target.className + ''; 
                 this.modalState = true;
+                this.onModal.emit(this.modalState); //for eventemiit
         }
         onMouseover(e): void {
                 console.log(e);

@@ -21,7 +21,7 @@
         <section class="contents">
                 <mc-definition *ngIf="selectedIndex.name_eng === 'definition'"></mc-definition>
                 <mc-principle *ngIf="selectedIndex.name_eng === 'principle'"></mc-principle>
-                <mc-usage *ngIf="selectedIndex.name_eng === 'usage'"></mc-usage>
+                <mc-usage (onModal)="changeState($event)" *ngIf="selectedIndex.name_eng === 'usage'"></mc-usage>
                 <mc-product *ngIf="selectedIndex.name_eng === 'product'"></mc-product>
                 <mc-history *ngIf="selectedIndex.name_eng === 'history'"></mc-history>
                 <mc-proscons  *ngIf="selectedIndex.name_eng === 'proscons'"></mc-proscons>
