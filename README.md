@@ -63,6 +63,26 @@ Your application is crashing. Waiting for file change.
 - `npm install` 후 `meteor run`
 
 
+
+---
+---
+## metoer에 gulp 설치&활용하기
+
+gulp를 sass auto complie에 사용하기위해 설치하고자했다. 그래서 언제나 그랬듯 이렇게 설치했다.
+```
+npm install gulp
+```
+그런데 설치마치고 나서도 gulp 실행이 안된다.
+
+```
+local gulp not found in ~
+Try running: npm install gulp
+```
+
+```
+npm link gulp
+```
+역시나 안된다.
 ---
 ---
 ## 개발참고 문서
