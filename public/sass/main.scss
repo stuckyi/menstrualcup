@@ -5,6 +5,7 @@
 @import './mixin';
 @import './color';
 @import './typography';
+@import './parallax';
 
 
 
@@ -78,6 +79,7 @@ blockquote {
 
 a {
   color: $fontCol-aquamarine;
+  text-decoration: none;
 }
 
 

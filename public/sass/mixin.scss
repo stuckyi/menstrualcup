@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-/* mixin */
-
 @mixin size($width, $height: $width) {
   width: $width;
   height: $height;
@@ -26,15 +24,6 @@
 
 
 
-/*
-@include border-radius(5px);
-
-// Single side border-radius
-@include border-top-radius(10px);
-@include border-right-radius(8px);
-@include border-bottom-radius(10px);
-@include border-left-radius (6px);
-*/
 
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
@@ -72,3 +61,4 @@
      border-top-left-radius: $radius;
      background-clip: padding-box;
 }
+

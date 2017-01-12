@@ -1,0 +1,33 @@
+$image-width: 200;
+
+.container {
+  position: fixed;
+  background-color:coral; // for test
+  right: 20%;
+  top: 40%;
+  
+  
+  [class^="sprite-"], [class*=" sprite-"] {
+      // background-image: url(http://i.imgur.com/vpjGWKb.png);
+      background-image: url(./img/gif/astro.png);
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      position: absolute;
+      width: #{$image-width - 2}px;
+      height: 200px;
+      display: none;
+  }
+  
+  @for $i from 0 through 17 {
+      .sprite-#{($i + 1)} {
+          background-position: unquote(-#{($i * $image-width)}px) 0;
+          border: coral 2px solid;
+      }
+  }
+}
+
+.spacer-div {
+  border:red solid 2px;
+  background-color:coral;
+  margin-bottom: 2000px;
+}

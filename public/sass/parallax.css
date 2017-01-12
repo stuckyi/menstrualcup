@@ -1,0 +1,74 @@
+.container {
+  position: fixed;
+  background-color: coral;
+  right: 20%;
+  top: 40%; }
+  .container [class^="sprite-"], .container [class*=" sprite-"] {
+    background-image: url(./img/gif/astro.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 198px;
+    height: 200px;
+    display: none; }
+  .container .sprite-1 {
+    background-position: -0px 0;
+    border: coral 2px solid; }
+  .container .sprite-2 {
+    background-position: -200px 0;
+    border: coral 2px solid; }
+  .container .sprite-3 {
+    background-position: -400px 0;
+    border: coral 2px solid; }
+  .container .sprite-4 {
+    background-position: -600px 0;
+    border: coral 2px solid; }
+  .container .sprite-5 {
+    background-position: -800px 0;
+    border: coral 2px solid; }
+  .container .sprite-6 {
+    background-position: -1000px 0;
+    border: coral 2px solid; }
+  .container .sprite-7 {
+    background-position: -1200px 0;
+    border: coral 2px solid; }
+  .container .sprite-8 {
+    background-position: -1400px 0;
+    border: coral 2px solid; }
+  .container .sprite-9 {
+    background-position: -1600px 0;
+    border: coral 2px solid; }
+  .container .sprite-10 {
+    background-position: -1800px 0;
+    border: coral 2px solid; }
+  .container .sprite-11 {
+    background-position: -2000px 0;
+    border: coral 2px solid; }
+  .container .sprite-12 {
+    background-position: -2200px 0;
+    border: coral 2px solid; }
+  .container .sprite-13 {
+    background-position: -2400px 0;
+    border: coral 2px solid; }
+  .container .sprite-14 {
+    background-position: -2600px 0;
+    border: coral 2px solid; }
+  .container .sprite-15 {
+    background-position: -2800px 0;
+    border: coral 2px solid; }
+  .container .sprite-16 {
+    background-position: -3000px 0;
+    border: coral 2px solid; }
+  .container .sprite-17 {
+    background-position: -3200px 0;
+    border: coral 2px solid; }
+  .container .sprite-18 {
+    background-position: -3400px 0;
+    border: coral 2px solid; }
+
+.spacer-div {
+  border: red solid 2px;
+  background-color: coral;
+  margin-bottom: 2000px; }
+
+/*# sourceMappingURL=parallax.css.map */

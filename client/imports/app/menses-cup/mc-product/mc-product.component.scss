@@ -1,5 +1,5 @@
-@charset "UTF-8";
-
+@charset "UTF-8"
+/*
 @import "../../../../../public/mixin-container";
 @import "../../../../../public/sass/typography";
 // @import "../../../../../public/color-container";
@@ -7,7 +7,8 @@
 * {
   box-sizing: border-box;
 }
-
+*/
+/*
 $Gray50:  #fafafa;
 $Gray100: #f5f5f5;
 $Gray200: #eeeeee;
@@ -19,7 +20,9 @@ $Gray700: #616161;
 $Gray800: #424242;
 $Gray900: #212121;
 
-//filter 선택영역
+*/
+/*
+
 #filterable-product-selection{
         @include size(100%, 200px);
         @include flex(flex, row nowrap);
@@ -61,13 +64,13 @@ $Gray900: #212121;
                        
                        select{
                                border: 1px solid #000;
-                               @include size(100%, auto); /* for test */
+                               @include size(100%, auto);
                        }
                }
         }
 
 }
-//filter product  view 영역
+
 #filterable-product-table{
         @include size(100%, 600px);
         @include flex(flex, row wrap);
@@ -96,3 +99,4 @@ $Gray900: #212121;
 
 
 
+*/

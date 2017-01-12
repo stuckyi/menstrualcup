@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
+import { ScrollComponent } from './interaction/scroll/scroll.component';
 import template from './app.component.html';
 import styles from '../../../public/sass/main.css';
 
@@ -19,13 +20,39 @@ export class AppComponent implements OnInit {
     { id:5, name: '장단점', name_eng: 'proscons', url:'/proscons' }
   ];
 
-  ngOnInit(){
+  
+
+  
+
+  constructor(private ref: ElementRef){ }
+  ngOnInit() {
     this.selectedMenu = '생리컵이란';
   }
-
+  
   onMenu(menu){
     console.log(menu);
     this.selectedMenu = menu;
+  }
+
+
+  gotoTop() {
+
+    
+    console.log("gotoTop!");
+    let nativeElement = this.ref.nativeElement;
+    let bodyElement = nativeElement.parentNode;
+    let DOMElement = bodyElement.parentNode;
+
+    
+    console.log('ElementRef', this.ref);
+    console.log('nativeElement', nativeElement);
+    console.log('bodyElement', bodyElement);
+    console.log('DOMElement', DOMElement.parentNode);
+
+
+
+    // bodyElement.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
   }
   
 }

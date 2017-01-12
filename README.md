@@ -1,3 +1,53 @@
+## fourseven:scss
+
+[meteor developers page](https://guide.meteor.com/build-tool.html#css-which-preprocessor)에서는 sass를 meteor에서 build하는 가장 좋은 plugin은 [fourseven:scss](https://atmospherejs.com/fourseven/scss)라고했다. 따라서 설명하고있는대로 진행하기로 했다.
+
+
+
+
+### Installation
+meteor의 pacakge management system 을 사용하여 설치한다.
+
+```
+meteor add fourseven:scss
+```
+meteor에 `fourseven:scss`를 add한다.
+
+```
+//설치 완료 후 메시지
+Changes to your project's package version selections:
+fourseven:scss  added, version 3.13.0
+
+fourseven:scss: Style with attitude. Sass and SCSS support for Meteor.js.
+```
+만약 이것을 사용하기를 원한다면, 가지고있는 pacakge control file에 (다음과 같은) `onUse` block을 추가한다.
+```
+Package.onUse(function (api) {
+  ...
+  api.use('fourseven:scss');
+  ...
+});
+
+```
+
+
+> 결정적으로, fourseven:scss는 angular-compiler와 conflict가 나서 사용하지 않기로하고. 기타 추가적인 부분에 대해서는 peter나 arnold를 통해서 물어보는 방법이 더 효율적일 것이라고 생각하고있다.(17.1.10)
+
+
+```
+sass --watch public/sass/color.scss:public/sass/color.css
+```
+
+
+## 특정 파일만 `--watch`하는 것이 아니라 전체 파일 또는 디렉토리 `watch`하기
+
+```
+sass --watch . //전체 파일
+sass --watch ./public/. //public 폴더의 전체파일
+```
+
+
+
 ##modal ref
 - [w3school modal example](http://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal2)
 - [w3school modal ref](http://www.w3schools.com/howto/howto_css_modals.asp)

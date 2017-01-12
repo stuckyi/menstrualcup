@@ -1,14 +1,3 @@
-/* mixin */
-/*
-@include border-radius(5px);
-
-// Single side border-radius
-@include border-top-radius(10px);
-@include border-right-radius(8px);
-@include border-bottom-radius(10px);
-@include border-left-radius (6px);
-*/
-/* color */
 .modal-content {
   -webkit-border-radius: 10px;
   border-radius: 10px;

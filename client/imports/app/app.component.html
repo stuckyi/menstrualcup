@@ -1,6 +1,9 @@
 
-<div id="backToTop"><p>TOP</p></div>
 
+
+<div id="backToTop" (click)="gotoTop()"><p>TOP</p></div>
+
+<inter-scroll></inter-scroll>
 
 <header class="header">
         <div class="logo">
@@ -11,14 +14,6 @@
                         <li *ngFor="let menu of menuList">
                                 <a (click)="onMenu(menu.name)"routerLink="{{menu.url}}" routerLinkActive="active">{{menu.name}}</a>
                         </li>
-                        <!--
-                        <li><a routerLink="/intro" routerLinkActive="active">생리컵이란</a></li>
-                        <li><a routerLink="/principle" routerLinkActive="active">작동원리</a></li>
-                        <li><a routerLink="/usage" routerLinkActive="active">사용법</a></li>
-                        <li><a routerLink="/product" routerLinkActive="active">제품정보</a></li>
-                        <li><a routerLink="/history" routerLinkActive="active">역사</a></li>
-                        <li><a routerLink="/proscons" routerLinkActive="active">장단점</a></li>
-                        -->
                 </ul>
         </div>
 </header> 
@@ -29,6 +24,7 @@
         </section>
         <section class="contents">
                 <router-outlet ></router-outlet>
+
         </section>
 </div>
 
