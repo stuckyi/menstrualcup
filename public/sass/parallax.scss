@@ -1,33 +1,43 @@
-$image-width: 200;
+@charset "UTF-8";
 
-.container {
+
+@import "./mixin";
+
+
+$img-width: 200;  //sprite 단위의 이미지 너비(px)
+$img-right: 20%;  //right 
+$img-top: 40%;    //top
+
+$img-url: './img/gif/astro.png';    //sprite img path
+$test-border: none;
+
+
+//sprite content를 담는 div
+.spritebox {
+  //set skrollr img position
   position: fixed;
-  background-color:coral; // for test
-  right: 20%;
-  top: 40%;
+  right: $img-right;
+  top: $img-top;
   
   
   [class^="sprite-"], [class*=" sprite-"] {
       // background-image: url(http://i.imgur.com/vpjGWKb.png);
-      background-image: url(./img/gif/astro.png);
+
+
+      position: absolute;
+      @include size(#{$img-width - 2}px, 200px);
+      display: none;
+
+      background-image: url($img-url);
       background-position: 0 0;
       background-repeat: no-repeat;
-      position: absolute;
-      width: #{$image-width - 2}px;
-      height: 200px;
-      display: none;
+
   }
   
   @for $i from 0 through 17 {
       .sprite-#{($i + 1)} {
-          background-position: unquote(-#{($i * $image-width)}px) 0;
-          border: coral 2px solid;
+          background-position: unquote(-#{($i * $img-width)}px) 0;
+          border: $test-border;
       }
   }
-}
-
-.spacer-div {
-  border:red solid 2px;
-  background-color:coral;
-  margin-bottom: 2000px;
 }

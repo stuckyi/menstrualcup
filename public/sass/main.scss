@@ -6,6 +6,8 @@
 @import './color';
 @import './typography';
 @import './parallax';
+@import './animation';
+
 
 
 
@@ -78,8 +80,11 @@ blockquote {
 }
 
 a {
-  color: $fontCol-aquamarine;
   text-decoration: none;
+}
+a:visited,
+a:link {
+  color: $main-color-dark;
 }
 
 
@@ -92,33 +97,41 @@ a {
   @include flex(flex, row nowrap);
   @include size(100%, auto);
   @include min-size(960px, auto);
-  color: $fontCol-black;
-  font-weight: bold;
 }
 
 .logo {
   @include size(10%, auto);
   @include min-size(100px, auto);
-  text-align: center;
+  
+  > a {
+    margin-left:20px; 
+    margin-top:20px;
+    font-weight: bold;
+    color: $main-color-dark;
+  }
 }
 
 .menu {
   @include size(100px, auto);
-  position: absolute;
+  position: fixed;
+  left: 2%;
+  top:38%;
 }
 
 .menu ul {
-  @include flex(flex, row wrap);
-  position: fixed;
-  right: 10px;
+  @include flex(flex, column wrap);
+  
   list-style: none;
-  text-align: center;
-  > li {
+  li {
     @include size(100px, auto);
+    a{ color: $grey; }
+    a.active { color: $main-color-dark; }
+    
   }
+  
 }
 
-.wrap {
+#wrap {
   z-index: 300;
   position: relative;
   @include size(100%, auto);
@@ -339,5 +352,11 @@ a {
   
 }
 
+
+
+.text {
+  animation-name: fadeIn;
+  animation-duration: 1.75s;
+}
 
 

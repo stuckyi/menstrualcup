@@ -425,79 +425,78 @@ html:lang(ko) {
 html:lang(ko) {
   font-size: 17px; }
 
-.container {
+.spritebox {
   position: fixed;
-  background-color: coral;
   right: 20%;
   top: 40%; }
-  .container [class^="sprite-"], .container [class*=" sprite-"] {
-    background-image: url(./img/gif/astro.png);
-    background-position: 0 0;
-    background-repeat: no-repeat;
+  .spritebox [class^="sprite-"], .spritebox [class*=" sprite-"] {
     position: absolute;
     width: 198px;
     height: 200px;
-    display: none; }
-  .container .sprite-1 {
+    display: none;
+    background-image: url("./img/gif/astro.png");
+    background-position: 0 0;
+    background-repeat: no-repeat; }
+  .spritebox .sprite-1 {
     background-position: -0px 0;
-    border: coral 2px solid; }
-  .container .sprite-2 {
+    border: none; }
+  .spritebox .sprite-2 {
     background-position: -200px 0;
-    border: coral 2px solid; }
-  .container .sprite-3 {
+    border: none; }
+  .spritebox .sprite-3 {
     background-position: -400px 0;
-    border: coral 2px solid; }
-  .container .sprite-4 {
+    border: none; }
+  .spritebox .sprite-4 {
     background-position: -600px 0;
-    border: coral 2px solid; }
-  .container .sprite-5 {
+    border: none; }
+  .spritebox .sprite-5 {
     background-position: -800px 0;
-    border: coral 2px solid; }
-  .container .sprite-6 {
+    border: none; }
+  .spritebox .sprite-6 {
     background-position: -1000px 0;
-    border: coral 2px solid; }
-  .container .sprite-7 {
+    border: none; }
+  .spritebox .sprite-7 {
     background-position: -1200px 0;
-    border: coral 2px solid; }
-  .container .sprite-8 {
+    border: none; }
+  .spritebox .sprite-8 {
     background-position: -1400px 0;
-    border: coral 2px solid; }
-  .container .sprite-9 {
+    border: none; }
+  .spritebox .sprite-9 {
     background-position: -1600px 0;
-    border: coral 2px solid; }
-  .container .sprite-10 {
+    border: none; }
+  .spritebox .sprite-10 {
     background-position: -1800px 0;
-    border: coral 2px solid; }
-  .container .sprite-11 {
+    border: none; }
+  .spritebox .sprite-11 {
     background-position: -2000px 0;
-    border: coral 2px solid; }
-  .container .sprite-12 {
+    border: none; }
+  .spritebox .sprite-12 {
     background-position: -2200px 0;
-    border: coral 2px solid; }
-  .container .sprite-13 {
+    border: none; }
+  .spritebox .sprite-13 {
     background-position: -2400px 0;
-    border: coral 2px solid; }
-  .container .sprite-14 {
+    border: none; }
+  .spritebox .sprite-14 {
     background-position: -2600px 0;
-    border: coral 2px solid; }
-  .container .sprite-15 {
+    border: none; }
+  .spritebox .sprite-15 {
     background-position: -2800px 0;
-    border: coral 2px solid; }
-  .container .sprite-16 {
+    border: none; }
+  .spritebox .sprite-16 {
     background-position: -3000px 0;
-    border: coral 2px solid; }
-  .container .sprite-17 {
+    border: none; }
+  .spritebox .sprite-17 {
     background-position: -3200px 0;
-    border: coral 2px solid; }
-  .container .sprite-18 {
+    border: none; }
+  .spritebox .sprite-18 {
     background-position: -3400px 0;
-    border: coral 2px solid; }
+    border: none; }
 
-.spacer-div {
-  border: red solid 2px;
-  background-color: coral;
-  margin-bottom: 2000px; }
-
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 /*space*/
 /*style reset*/
 * {
@@ -543,8 +542,11 @@ blockquote {
   margin-bottom: 60px; }
 
 a {
-  color: #22B2A1;
   text-decoration: none; }
+
+a:visited,
+a:link {
+  color: #00C4C4; }
 
 /* 스타일링 */
 .header {
@@ -556,34 +558,39 @@ a {
   width: 100%;
   height: auto;
   min-width: 960px;
-  min-height: auto;
-  color: black;
-  font-weight: bold; }
+  min-height: auto; }
 
 .logo {
   width: 10%;
   height: auto;
   min-width: 100px;
-  min-height: auto;
-  text-align: center; }
+  min-height: auto; }
+  .logo > a {
+    margin-left: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #00C4C4; }
 
 .menu {
   width: 100px;
   height: auto;
-  position: absolute; }
+  position: fixed;
+  left: 2%;
+  top: 38%; }
 
 .menu ul {
   display: flex;
-  flex-flow: row wrap;
-  position: fixed;
-  right: 10px;
-  list-style: none;
-  text-align: center; }
-  .menu ul > li {
+  flex-flow: column wrap;
+  list-style: none; }
+  .menu ul li {
     width: 100px;
     height: auto; }
+    .menu ul li a {
+      color: #9E9E9E; }
+    .menu ul li a.active {
+      color: #00C4C4; }
 
-.wrap {
+#wrap {
   z-index: 300;
   position: relative;
   width: 100%;
@@ -781,5 +788,9 @@ a {
     .history_box2 > .explain > .text {
       width: 380px;
       height: auto; }
+
+.text {
+  animation-name: fadeIn;
+  animation-duration: 1.75s; }
 
 /*# sourceMappingURL=main.css.map */

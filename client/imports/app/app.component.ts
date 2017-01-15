@@ -24,7 +24,8 @@ export class AppComponent implements OnInit {
 
   
 
-  constructor(private ref: ElementRef){ }
+  constructor(private ref: ElementRef) { }
+  
   ngOnInit() {
     this.selectedMenu = '생리컵이란';
   }
