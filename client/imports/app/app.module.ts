@@ -3,11 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 
+
+
 import { AppRoutingModule } from './app-routing.module'; 
 import { HomeComponent } from './home/home.component';
 import { AppComponent } from './app.component';
 
+
 import { ScrollComponent } from './interaction/scroll/scroll.component';
+import { AccordionComponent } from './interaction/accordion/accordion.component';
 
 import { IntroComponent } from './intro/intro.component';
 import { PrincipleComponent } from './principle/principle.component';
@@ -34,10 +38,11 @@ import { Page404Component } from './page404.component';
     HistoryComponent,
     ProsconsComponent,
     Page404Component,
-    ScrollComponent
+    ScrollComponent,
+    AccordionComponent
   ],
   bootstrap: [
     AppComponent
   ]
 })
-export class AppModule {}
+export class AppModule { }

@@ -1,0 +1,20 @@
+<div id="sideNav">
+        <div class="index" 
+        (click)="onIndex('intro')"
+        [class.selected]="selectedIndex === 'intro'"
+        >intro</div>
+
+        <div class="items" *ngIf="indexState.intro">intro1</div>
+        <div class="items" *ngIf="indexState.intro">intro2</div>
+        <div class="items" *ngIf="indexState.intro">intro3</div>
+        
+
+        <div class="index"
+        (click)="onIndex('principle')"
+        [class.selected]="indexState.principle"
+        >principle</div>
+        <div class="items" *ngIf="indexState.principle">principle1</div>
+        <div class="items" *ngIf="indexState.principle">principle2</div>
+        <div class="items" *ngIf="indexState.principle">principle3</div>
+        
+</div>

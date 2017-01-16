@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+@import './reset';
+@import './mixin';
+@import './color';
+
+$border-test: magenta;
+
+#sideNav {
+        @include flex(flex, column nowrap);
+        @include size(100%, auto);
+        background-color:$grey-200;
+        color:white;
+        .index { 
+                @include size(100%, auto);
+                
+        }
+        
+        .items{
+                border: solid 2px 
+        }
+
+        .selected {
+                background-color: $main-color-dark;
+        }
+        
+}
+

@@ -12,7 +12,7 @@ export class ScrollComponent implements OnInit {
 
         
         ngOnInit() {
-                skrollr.init(); //skrollr init
+                console.log('ScrollComponent ngOnInit');
         }
         
         

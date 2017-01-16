@@ -7,6 +7,7 @@
 @import './typography';
 @import './parallax';
 @import './animation';
+@import './sidenav';
 
 
 
@@ -114,7 +115,8 @@ a:link {
 .menu {
   @include size(100px, auto);
   position: fixed;
-  left: 2%;
+  left:1%;
+  
   top:38%;
 }
 

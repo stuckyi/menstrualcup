@@ -9,6 +9,7 @@
         <div class="logo">
                 <a routerLink="/home" routerLinkActive="active">안녕, 생리컵?</a>
         </div>
+        <!--
         <div class="menu">
                 <ul>
                         <li *ngFor="let menu of menuList">
@@ -16,15 +17,22 @@
                         </li>
                 </ul>
         </div>
+        -->
+        <div class="menu">
+                <inter-accordion></inter-accordion>
+        </div>
 </header> 
 
 <div id="wrap">
         <section class="intro">
                 <div class=intro_title> <h1>{{selectedMenu}}</h1></div>
         </section>
+        
         <section class="contents">
                 <router-outlet ></router-outlet>
+                
         </section>
+        
 </div>
 
 

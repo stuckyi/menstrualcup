@@ -8,4 +8,8 @@ import template from './principle.component.html';
 })
 export class PrincipleComponent {
 
+        constructor() {
+                console.log(skrollr);
+        }
+
 }

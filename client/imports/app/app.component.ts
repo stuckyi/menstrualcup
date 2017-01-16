@@ -1,5 +1,8 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 import { ScrollComponent } from './interaction/scroll/scroll.component';
+import { AccordionComponent } from './interaction/accordion/accordion.component';
+
+
 import template from './app.component.html';
 import styles from '../../../public/sass/main.css';
 
@@ -25,35 +28,93 @@ export class AppComponent implements OnInit {
   
 
   constructor(private ref: ElementRef) { }
-  
+
+  skrollrInit() {
+    let s = skrollr.init(/*other stuff*/);
+    //두 번째 매개변수는 옵션.
+    skrollr.menu.init(s, {
+        
+        animate: true,  //skrollr는 `animateTo`를 활용하여 새로운 위치로 부드럽게 이동.
+        //The easing function to use.
+        easing: 'sqrt',
+    
+        //skrollr.init의 값과 같도록 data-[offset]값을 곱하시오. 
+        scale: 2,
+    
+        //aniamtion의 길이(ms)
+        duration: function(currentTop, targetTop) {
+            //기본값., the duration is hardcoded at 500ms.
+            return 500;
+    
+            //그러나 현재스크롤위치(`currentTop`)과 목표스크롤위치(`targetTop`)으로 값을 계산할 수 도 있다.
+            //return Math.abs(currentTop - targetTop) * 10;
+        },
+    
+        //만약 handleLink 함수를 넘기면,  `data-menu-top` 와 `data-menu-offset` 함수를 비활성화(disable)할 것이다.
+        //skrollr가 scroll할 곳을 제어할 수 있다. 클릭된 링크를 매개변수로 가져오고 숫자를 리턴해야한다.
+        handleLink: function(link) {
+            return 400;//Hardcoding 400 doesn't make much sense.
+        },
+    
+        
+        // 기본적으로 skrollr-menu 는 href 속성에 hash가 포함된 링크에만 반응한다.   e.g. `href="#foo"`.
+        // `complexLinks`를 활성화하면 skrollr-menu also reacts to절대경로나 상대경로에도 반응한다.
+        
+        //(사용자가 올바른 경로에 있는 경우)다음은 모드 올바르게 작동한다
+        //http://example.com/currentPage/#foo
+        //http://example.com/currentDir/currentPage.html?foo=bar#foo
+        ///?foo=bar#foo
+
+        complexLinks: false,
+    
+        //이 이벤트는 우리가 새로운 hash로 jump/animatie하기 직전에 트리거된다.
+        change: function(newHash, newTopPosition) {
+            //Do stuff
+        },
+    
+        //URL에 해시링크(e.g. `#foo`) 추가한다.
+        updateUrl: false //defaults to `true`.
+    });
+  }
+  skrollrAnimateTo() {
+    let step = document.getElementById('section-about');
+    skrollr.animateTo(skrollr.relativeToAbsolute(step, 'top', 'top'));
+  }
+
+
   ngOnInit() {
+    console.log('AppComponent ngOnInit');
+    
+    this.skrollrInit();
     this.selectedMenu = '생리컵이란';
   }
+
+
   
   onMenu(menu){
     console.log(menu);
     this.selectedMenu = menu;
+
+    
+    this.gotoTop(); // 페이지 최상단으로 이동 
   }
 
+  
 
   gotoTop() {
-
     
     console.log("gotoTop!");
     let nativeElement = this.ref.nativeElement;
     let bodyElement = nativeElement.parentNode;
     let DOMElement = bodyElement.parentNode;
 
-    
+    /*
     console.log('ElementRef', this.ref);
     console.log('nativeElement', nativeElement);
     console.log('bodyElement', bodyElement);
     console.log('DOMElement', DOMElement.parentNode);
-
-
-
-    // bodyElement.scrollTo(0, 0);
-    // window.scrollTo(0, 0);
+    */
+    window.scrollTo(0, 0);
   }
   
 }
