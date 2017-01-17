@@ -113,7 +113,7 @@ a:link {
 }
 
 .menu {
-  @include size(100px, auto);
+  @include size(180px, auto);
   position: fixed;
   left:1%;
   
@@ -187,11 +187,6 @@ a:link {
   left: 282px;
   bottom: 10px;
 }
-
-.selected {
-  border-bottom: 1px solid black;
-}
-
 
 /* 접는 방법에 대한 표*/
 
@@ -292,20 +287,19 @@ a:link {
 #backToTop {
   z-index: 400;
   position: fixed;
-  top: 60%;
-  left: 2%;
-  @include border-radius(4px);
+  bottom: 4%;
+  right: 2%;
+  @include size(40px, 40px);
+  @include border-radius(10px);
+
   background-color: $main-color;
-  @include size(100px, auto);
-  color: $fontCol-white;
-
+  text-align:center;
+  i {
+    padding:8px;
+    color: $fontCol-white;
+    vertical-align:middle;
+  }
   
-
-  > p { 
-          text-align:center;
-          margin:0;
-          padding:10px; 
-          font-weight:900; }
 }
 
 

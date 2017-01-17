@@ -11,6 +11,11 @@
 @import url(http://fonts.googleapis.com/earlyaccess/kopubbatang.css);
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 @import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+@import url("https://fonts.googleapis.com/css?family=Roboto:300");
+@import url(http://fonts.googleapis.com/earlyaccess/kopubbatang.css);
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+@import url("https://fonts.googleapis.com/css?family=Roboto:300");
 html {
   font-size: 17px;
   font-family: sans-serif;
@@ -916,20 +921,45 @@ html:lang(ko) {
   line-height: 30px;
   line-height: 17.6470588rem; }
 
+/* typo */
+html:lang(ko) {
+  font-size: 17px; }
+
 #sideNav {
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
   height: auto;
-  background-color: #EEEEEE;
-  color: white; }
+  overflow: hidden; }
   #sideNav .index {
+    z-index: 500;
+    display: flex;
+    flex-flow: row nowrap;
     width: 100%;
-    height: auto; }
-  #sideNav .items {
-    border: solid 2px; }
-  #sideNav .selected {
-    background-color: #00C4C4; }
+    height: auto;
+    margin-top: 20px;
+    border-top: 1px solid #EEEEEE; }
+    #sideNav .index a {
+      width: 80%;
+      height: auto; }
+    #sideNav .index i {
+      width: 20%;
+      height: auto; }
+  #sideNav .index:nth-of-type(1) {
+    border-top: none; }
+  #sideNav .item-container {
+    margin-left: 4px;
+    overflow: hidden; }
+  #sideNav span {
+    color: #00C4C4;
+    font-weight: 200;
+    margin-left: 10px; }
+  #sideNav span.selected {
+    color: #00C4C4;
+    font-weight: 500; }
+  #sideNav i {
+    color: #00C4C4;
+    vertical-align: middle; }
 
 /*space*/
 /*style reset*/
@@ -1006,7 +1036,7 @@ a:link {
     color: #00C4C4; }
 
 .menu {
-  width: 100px;
+  width: 180px;
   height: auto;
   position: fixed;
   left: 1%;
@@ -1075,9 +1105,6 @@ a:link {
   position: absolute;
   left: 282px;
   bottom: 10px; }
-
-.selected {
-  border-bottom: 1px solid black; }
 
 /* 접는 방법에 대한 표*/
 .fold {
@@ -1168,21 +1195,20 @@ a:link {
 #backToTop {
   z-index: 400;
   position: fixed;
-  top: 60%;
-  left: 2%;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
+  bottom: 4%;
+  right: 2%;
+  width: 40px;
+  height: 40px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
   background-clip: padding-box;
   /* stops bg color from leaking outside the border: */
   background-color: aquamarine;
-  width: 100px;
-  height: auto;
-  color: white; }
-  #backToTop > p {
-    text-align: center;
-    margin: 0;
-    padding: 10px;
-    font-weight: 900; }
+  text-align: center; }
+  #backToTop i {
+    padding: 8px;
+    color: white;
+    vertical-align: middle; }
 
 .history_box2 {
   margin-top: 60px;

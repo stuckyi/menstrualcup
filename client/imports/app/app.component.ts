@@ -1,4 +1,5 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
 import { ScrollComponent } from './interaction/scroll/scroll.component';
 import { AccordionComponent } from './interaction/accordion/accordion.component';
 
@@ -104,17 +105,24 @@ export class AppComponent implements OnInit {
   gotoTop() {
     
     console.log("gotoTop!");
+    /*
+    
     let nativeElement = this.ref.nativeElement;
     let bodyElement = nativeElement.parentNode;
     let DOMElement = bodyElement.parentNode;
 
-    /*
+    
     console.log('ElementRef', this.ref);
     console.log('nativeElement', nativeElement);
     console.log('bodyElement', bodyElement);
     console.log('DOMElement', DOMElement.parentNode);
     */
     window.scrollTo(0, 0);
+    console.log(window);
+  }
+
+  onScroll(e: event) {
+    console.log('scroll event', e);
   }
   
 }

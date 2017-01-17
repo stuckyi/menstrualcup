@@ -1,7 +1,10 @@
 
 
-
-<div id="backToTop" (click)="gotoTop()"><p>TOP</p></div>
+<div (window:scroll)="onScroll($event)">scroll</div>
+<div id="backToTop" (click)="gotoTop()" >
+        <i class="material-icons">arrow_upward</i>
+        
+</div>
 
 <inter-scroll></inter-scroll>
 

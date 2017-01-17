@@ -7,6 +7,10 @@
  */
 /* Document
    ========================================================================== */
+@import url(http://fonts.googleapis.com/earlyaccess/kopubbatang.css);
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+@import url("https://fonts.googleapis.com/css?family=Roboto:300");
 html {
   font-size: 17px;
   font-family: sans-serif;
@@ -417,19 +421,44 @@ html:lang(ko) {
   line-height: 30px;
   line-height: 17.6470588rem; }
 
+/* typo */
+html:lang(ko) {
+  font-size: 17px; }
+
 #sideNav {
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
   height: auto;
-  background-color: #EEEEEE;
-  color: white; }
+  overflow: hidden; }
   #sideNav .index {
+    z-index: 500;
+    display: flex;
+    flex-flow: row nowrap;
     width: 100%;
-    height: auto; }
-  #sideNav .items {
-    border: solid 2px; }
-  #sideNav .selected {
-    background-color: #00C4C4; }
+    height: auto;
+    margin-top: 20px;
+    border-top: 1px solid #EEEEEE; }
+    #sideNav .index a {
+      width: 80%;
+      height: auto; }
+    #sideNav .index i {
+      width: 20%;
+      height: auto; }
+  #sideNav .index:nth-of-type(1) {
+    border-top: none; }
+  #sideNav .item-container {
+    margin-left: 4px;
+    overflow: hidden; }
+  #sideNav span {
+    color: #00C4C4;
+    font-weight: 200;
+    margin-left: 10px; }
+  #sideNav span.selected {
+    color: #00C4C4;
+    font-weight: 500; }
+  #sideNav i {
+    color: #00C4C4;
+    vertical-align: middle; }
 
 /*# sourceMappingURL=sidenav.css.map */

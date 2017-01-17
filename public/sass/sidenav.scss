@@ -3,26 +3,55 @@
 @import './reset';
 @import './mixin';
 @import './color';
+@import './typography';
 
 $border-test: magenta;
 
 #sideNav {
         @include flex(flex, column nowrap);
         @include size(100%, auto);
-        background-color:$grey-200;
-        color:white;
-        .index { 
+        overflow:hidden;
+
+        .index {
+                z-index:500;
+                @include flex(flex, row nowrap);
                 @include size(100%, auto);
-                
+                margin-top:20px;
+                border-top: 1px solid $grey-200;
+
+                a{
+                        @include size(80%, auto);
+                }
+                i {
+                        @include size(20%, auto);
+                }
         }
-        
-        .items{
-                border: solid 2px 
+        .index:nth-of-type(1){ 
+                border-top: none;
+        }
+        .item-container {
+                margin-left:4px;
+                overflow:hidden;
+        }
+      
+
+        span {
+                color: $main-color-dark;
+                font-weight:200;
+                margin-left:10px;
         }
 
-        .selected {
-                background-color: $main-color-dark;
+        span.selected {
+                color: $main-color-dark;
+                font-weight:500;
         }
+
+        i {
+                color:$main-color-dark;
+                vertical-align: middle;
+        }
+
+
         
 }
 

@@ -5,6 +5,8 @@
 @import url(http://fonts.googleapis.com/earlyaccess/kopubbatang.css);
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 @import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
 html:lang(ko) {
   font-size: 17px;
 } //default font size
@@ -20,3 +22,4 @@ $lineHeight1: 2rem; //blockquote
 $lineHeight2: 1.5rem; //.value_index, .value_data
 $font-sans: 'Noto Sans KR',sans-serif; //default font-family
 $font-serif: 'Nanum Myeongjo',serif;
+$font-eng: 'Roboto', sans-serif; //
