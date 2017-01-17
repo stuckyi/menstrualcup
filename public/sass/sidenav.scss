@@ -29,10 +29,20 @@ $border-test: magenta;
         .index:nth-of-type(1){ 
                 border-top: none;
         }
+
+        //item 들을 감싸는 영역. 이 영역에서 overflow가 필요.
         .item-container {
                 margin-left:4px;
                 overflow:hidden;
         }
+
+        .items{
+                span {
+                        font-size:$font-items;
+                }
+
+        }
+        
       
 
         span {

@@ -12,6 +12,7 @@ import { AppComponent } from './app.component';
 
 import { ScrollComponent } from './interaction/scroll/scroll.component';
 import { AccordionComponent } from './interaction/accordion/accordion.component';
+import { GotoTopComponent } from './interaction/gototop/gototop.component';
 
 import { IntroComponent } from './intro/intro.component';
 import { PrincipleComponent } from './principle/principle.component';
@@ -39,7 +40,8 @@ import { Page404Component } from './page404.component';
     ProsconsComponent,
     Page404Component,
     ScrollComponent,
-    AccordionComponent
+    AccordionComponent,
+    GotoTopComponent
   ],
   bootstrap: [
     AppComponent

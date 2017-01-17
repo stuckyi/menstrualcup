@@ -8,6 +8,8 @@
 @import './parallax';
 @import './animation';
 @import './sidenav';
+@import './interaction/gototop';
+
 
 
 
@@ -281,26 +283,6 @@ a:link {
 
 }
 
-
-/* 맨 위로가기 버튼 */
-
-#backToTop {
-  z-index: 400;
-  position: fixed;
-  bottom: 4%;
-  right: 2%;
-  @include size(40px, 40px);
-  @include border-radius(10px);
-
-  background-color: $main-color;
-  text-align:center;
-  i {
-    padding:8px;
-    color: $fontCol-white;
-    vertical-align:middle;
-  }
-  
-}
 
 
 .history_box2 {

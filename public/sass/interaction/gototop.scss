@@ -1,0 +1,32 @@
+@charset 'UTF-8';
+
+@import '../reset';
+@import '../mixin';
+@import '../color';
+@import '../typography';
+@import '../animation';
+
+
+
+
+#backToTop {
+  z-index: 400;
+  position: fixed;
+  bottom: 4%;
+  right: 2%;
+  @include size(40px, 40px);
+  @include border-radius(10px);
+
+
+  background-color: $main-color;
+  text-align:center;
+  i {
+    padding:8px;
+    color: $fontCol-white;
+    vertical-align:middle;
+  }
+
+
+  animation: fadeIn 1.5s;
+  
+}
