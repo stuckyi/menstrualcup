@@ -1,3 +1,95 @@
+# share workflow
+---
+## 최초 1번만 할 것
+
+
+meteor install
+```
+curl https://install.meteor.com/ | sh
+```
+
+
+### yarn install
+```
+npm install yarn
+```
+
+### sass install
+```
+sudo npm install -g sass
+```
+
+
+
+
+
+## git
+
+```
+git clone https://github.com/stuckyi/menstrualcup.git //원격저장소 clone : 원격저장소 내용을 로컬 저장소로 복제한다.
+```
+
+### 프로젝트 기반 파일 설치
+프로젝트 구동에 필요한 관련 파일과 의존성 파일을 자동으로 설치해준다.
+```
+yarn install
+```
+
+## git branch 생성하기
+자신의 로컬 저장소에 `develop`이라는 이름의 branch를 만든다.
+
+```
+git checkout -b develop
+```
+
+
+
+## 실행해보기
+meteor 를 실행한다.
+```
+meteor run
+```
+
+
+
+## 수정, 반영하기
+
+`.scss`파일이 변경되면 `.css`파일에 자동으로 반영해준다.
+
+> 이 프로젝트에서는 public 경로 아래에서만 --watch 기능을 사용해주기로 한다 일단.
+```
+sass --watch ./public/.
+```
+
+
+---
+수정했다고 했을 때.
+---
+
+- 기본적으로는 수정이 되면 ng2가 자동으로 `localhost:3000` 페이지를 새로고침한다.
+- 
+
+
+
+## 변경내용 로컬 저장소에 등록 하고 커밋하기
+
+```
+git add .  //현재 local 폴더의 변경내용 추가
+git commit -m "feat(add): add btn" //commit과 commit message 등록
+```
+
+## 변경내용 로컬 저장소의 master 브랜치로 통합하기 
+
+git push -u origin master // git push -u [푸시받을 원격저장소] [푸시할 로컬브랜치]
+
+
+```
+
+
+
+
+
+
 ## fourseven:scss
 
 [meteor developers page](https://guide.meteor.com/build-tool.html#css-which-preprocessor)에서는 sass를 meteor에서 build하는 가장 좋은 plugin은 [fourseven:scss](https://atmospherejs.com/fourseven/scss)라고했다. 따라서 설명하고있는대로 진행하기로 했다.
