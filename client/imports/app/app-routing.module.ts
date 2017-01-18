@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-
+import { HomeComponent } from './home/home.component';
 import { IntroComponent } from './intro/intro.component';
 import { PrincipleComponent } from './principle/principle.component';
 import { UsageComponent } from './usage/usage.component';
@@ -14,6 +14,7 @@ import { Page404Component } from './page404.component';
 
 const routes: Routes = [
         { path: ' ', redirectTo: './home', pathMatch: 'full' },
+        { path: 'home', component: HomeComponent },
         { path: 'intro', component: IntroComponent },
         { path: 'principle', component: PrincipleComponent },
         { path: 'usage', component: UsageComponent },
