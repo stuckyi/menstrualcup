@@ -41,7 +41,10 @@ body {
   line-height: $lineHeight0;
 }
 
+
+
 p {
+  font-family: $font-serif;
   margin-top: $margin-height2;
   margin-bottom: $margin-height1;
 }
@@ -83,7 +86,7 @@ a {
 }
 a:visited,
 a:link {
-  color: $main-color-dark;
+  color: $fontCol-black;
 }
 
 

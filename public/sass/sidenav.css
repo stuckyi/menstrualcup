@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -422,8 +423,20 @@ html:lang(ko) {
   line-height: 17.6470588rem; }
 
 /* typo */
+/* 한글 타이포 임포트 */
+/* 대한체 font-family: 'Daehan', serif; */
+@font-face {
+  font-family: 'Daehan';
+  font-style: normal;
+  font-weight: 400;
+  src: url("//cdn.jsdelivr.net/korean-webfonts/1/corps/yoon/Daehan/DaehanR.woff2") format("woff2"), url("//cdn.jsdelivr.net/korean-webfonts/1/corps/yoon/Daehan/DaehanR.woff") format("woff"); }
+@font-face {
+  font-family: 'Daehan';
+  font-style: normal;
+  font-weight: 700;
+  src: url("//cdn.jsdelivr.net/korean-webfonts/1/corps/yoon/Daehan/DaehanB.woff2") format("woff2"), url("//cdn.jsdelivr.net/korean-webfonts/1/corps/yoon/Daehan/DaehanB.woff") format("woff"); }
 html:lang(ko) {
-  font-size: 17px; }
+  font-size: 20px; }
 
 #sideNav {
   display: flex;

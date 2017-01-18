@@ -7,8 +7,30 @@
 @import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
 @import url('https://fonts.googleapis.com/css?family=Roboto:300');
 
+/* 한글 타이포 임포트 */
+/* 대한체 font-family: 'Daehan', serif; */
+@font-face {
+  font-family: 'Daehan';
+  font-style: normal;
+  font-weight: 400;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/yoon/Daehan/DaehanR.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/yoon/Daehan/DaehanR.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Daehan';
+  font-style: normal;
+  font-weight: 700;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/yoon/Daehan/DaehanB.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/yoon/Daehan/DaehanB.woff') format('woff');
+}
+
+
+
+
+
+
+
 html:lang(ko) {
-  font-size: 17px;
+  font-size: 20px;
 } //default font size
 $fontSize0: 100%; //body
 $fontSize1: 300%; //h1
@@ -17,11 +39,12 @@ $fontSize3: 120%; //h3, blockquote, .history_box > .title
 $fontSize4: 110%; //h4
 $fontSize5: 90%; //instruction
 $fontSize6: 80%; //.value_index, .value_data
-$lineHeight0: 1.7647058824rem; //default, .side_bar
-$lineHeight1: 2rem; //blockquote
-$lineHeight2: 1.5rem; //.value_index, .value_data
+$lineHeight0: 1.7647058824; //default, .side_bar
+$lineHeight1: 2; //blockquote
+$lineHeight2: 1.5; //.value_index, .value_data
 $font-sans: 'Noto Sans KR',sans-serif; //default font-family
-$font-serif: 'Nanum Myeongjo',serif;
+// $font-serif: 'Nanum Myeongjo',serif;
+$font-serif: 'Daehan', serif;
 $font-eng: 'Roboto', sans-serif; //
 
 
@@ -29,3 +52,4 @@ $font-eng: 'Roboto', sans-serif; //
 
 //sidenav
 $font-items: 90%;
+
