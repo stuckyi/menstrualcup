@@ -15,6 +15,8 @@ import styles from '../../../public/sass/main.css';
 })
 export class AppComponent implements OnInit {
   selectedMenu: string;
+  s: any;
+
   
 
   menuList = [
@@ -26,22 +28,32 @@ export class AppComponent implements OnInit {
     { id:5, name: '장단점', name_eng: 'proscons', url:'/proscons' }
   ];
 
+  onUpdate(e) {
+    console.log(e.clickname);
+    
+    let step = document.getElementById('#intro-structure'); 
+    // console.log(document);
+    // skrollr.animateTo(this.s.relativeToAbsolute(step, 'top', 'top'));
+    // console.log(skrollr);
+  }
+
   
 
   constructor(private ref: ElementRef) { 
     //set html lang '' to ko
-    console.log(ref.nativeElement);
-    console.log(ref.nativeElement.parentNode.parentNode.lang);
+    // console.log(ref.nativeElement);
+    // console.log(ref.nativeElement.parentNode.parentNode.lang);
     ref.nativeElement.parentNode.parentNode.lang = "ko";
-    console.log(ref.nativeElement.parentNode.parentNode.lang);
+    // console.log(ref.nativeElement.parentNode.parentNode.lang);
+    
     
 
   }
 
   skrollrInit() {
-    let s = skrollr.init(/*other stuff*/);
+    this.s = skrollr.init(/*other stuff*/);
     //두 번째 매개변수는 옵션.
-    skrollr.menu.init(s, {
+    skrollr.menu.init(this.s, {
         
         animate: true,  //skrollr는 `animateTo`를 활용하여 새로운 위치로 부드럽게 이동.
         //The easing function to use.
@@ -85,16 +97,13 @@ export class AppComponent implements OnInit {
         updateUrl: false //defaults to `true`.
     });
   }
-  skrollrAnimateTo() {
-    let step = document.getElementById('section-about');
-    skrollr.animateTo(skrollr.relativeToAbsolute(step, 'top', 'top'));
-  }
+  
 
 
   ngOnInit() {
     console.log('AppComponent ngOnInit');
-    
     this.skrollrInit();
+    // this.skrollrInit();
     this.selectedMenu = '생리컵이란';
   }
 

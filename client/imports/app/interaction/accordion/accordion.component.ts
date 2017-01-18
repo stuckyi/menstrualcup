@@ -1,4 +1,8 @@
-import { Component, OnInit, Input, trigger, state, style, transition, animate, keyframes } from '@angular/core';
+import {
+        Component, OnInit, Input, trigger, state, style, transition, animate, keyframes,
+Output, EventEmitter} from '@angular/core';
+
+
 
 import template from './accordion.component.html';
 
@@ -29,6 +33,10 @@ import template from './accordion.component.html';
         ]
 })
 export class AccordionComponent implements OnInit {
+        
+
+        @Output() update = new EventEmitter();
+
         selectedIndex: string;
         
         indexState = {
@@ -40,11 +48,19 @@ export class AccordionComponent implements OnInit {
         };
 
 
-
+        
         ngOnInit(): void{
                 this.selectedIndex = 'intro';
         }        
-        
+
+        //depth2 목록 클릭시 발생하는 이벤트.
+        //어떤 항목을 클릭했는지 AppComponent로 전달한다.
+        skrollrAnimateTo(clickname: string) {
+                // let targetEl = document.getElementsByClassName('text')[0].childNodes;
+                let targetEl = document.getElementById('principle-2').scrollTop;
+                console.log(targetEl);
+                this.update.emit({ clickname });
+        }
 
         onIndex(indexName: string) {
                 //모든 acoordion menu를 닫는다.
