@@ -10,13 +10,14 @@
         </div>
 
         <div class="item-container" >
-                <div class="items" [@selectedIndex]="selectedIndex" *ngIf="indexState.intro"><span>생리컵</span></div>
-                <div class="items"
-                [@selectedIndex]="selectedIndex"
-                *ngIf="indexState.intro"><span>생리컵의 구조</span></div>
-                <div class="items"
-                [@selectedIndex]="selectedIndex"
-                *ngIf="indexState.intro"><span>intro3</span></div>
+                <div class="items" [@selectedIndex]="selectedIndex" *ngIf="indexState.intro">
+                        <a href="#intro-concept" data-menu-top="1000"><span>생리컵</span></a>
+                </div>
+
+                <div class="items"[@selectedIndex]="selectedIndex"*ngIf="indexState.intro">
+                        <a href="#intro-structure" ><span>생리컵의 구조</span></a>
+                </div>
+                <div class="items" [@selectedIndex]="selectedIndex"*ngIf="indexState.intro"><span>intro3</span></div>
         </div>
 
 

@@ -506,6 +506,11 @@ html:lang(ko) {
     opacity: 0; }
   to {
     opacity: 1; } }
+@keyframes fadeOut {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -1395,6 +1400,11 @@ html:lang(ko) {
     opacity: 0; }
   to {
     opacity: 1; } }
+@keyframes fadeOut {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
 #backToTop {
   z-index: 400;
   position: fixed;
@@ -1407,8 +1417,7 @@ html:lang(ko) {
   background-clip: padding-box;
   /* stops bg color from leaking outside the border: */
   background-color: aquamarine;
-  text-align: center;
-  animation: fadeIn 1.5s; }
+  text-align: center; }
   #backToTop i {
     padding: 8px;
     color: white;
