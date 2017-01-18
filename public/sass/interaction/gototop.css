@@ -423,7 +423,7 @@ html:lang(ko) {
 
 /* typo */
 html:lang(ko) {
-  font-size: 17px; }
+  font-size: 18px; }
 
 @keyframes fadeIn {
   from {
@@ -446,7 +446,7 @@ html:lang(ko) {
   border-radius: 10px;
   background-clip: padding-box;
   /* stops bg color from leaking outside the border: */
-  background-color: aquamarine;
+  background-color: #F7FF8D;
   text-align: center; }
   #backToTop i {
     padding: 8px;

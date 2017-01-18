@@ -159,6 +159,36 @@ a:link {
   background-color: $bgCol-intro;
 }
 
+.page_title{
+  @include size(620px, auto);
+  margin: 0 auto;
+}
+
+.dot{
+  @include size(50px, 50px);
+  margin: 0 auto;
+  margin-top: 18px;
+  padding-top: 5px;
+  background-image: url(./img/170118circle.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  text-align: center;
+  font-weight: 700;
+  font-size: $fontSize4;
+ 
+}
+
+.small_title{
+  @include size(620px, auto);
+  margin: 0 auto;
+  padding-top: 5px;
+  text-align: center;
+  font-weight: 700;
+  font-size: $fontSize4;
+  letter-spacing: $letterSpacing0;
+}
+
 .contents {
   margin: 0 auto;
   @include size(780px, auto);
@@ -333,4 +363,32 @@ a:link {
   animation-duration: 1.75s;
 }
 
+/*-- 01 intro --*/
+.intro_definition{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  @include size(620px, auto);
+
+  > div:first-child{
+    @include size(320px, auto);
+
+    > img{
+      width:100%;
+    }
+  }
+
+  > div:last-child{
+    @include size(300px, auto);
+  }
+}
+
+.cup_structure{
+    margin: 0 auto;
+    width: 320px;
+
+    > img {
+      width: 100%;
+    }
+}
 
