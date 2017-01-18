@@ -28,9 +28,15 @@ export class AppComponent implements OnInit {
 
   
 
-  
+  constructor(private ref: ElementRef) { 
+    //set html lang '' to ko
+    console.log(ref.nativeElement);
+    console.log(ref.nativeElement.parentNode.parentNode.lang);
+    ref.nativeElement.parentNode.parentNode.lang = "ko";
+    console.log(ref.nativeElement.parentNode.parentNode.lang);
+    
 
-  constructor(private ref: ElementRef) { }
+  }
 
   skrollrInit() {
     let s = skrollr.init(/*other stuff*/);
