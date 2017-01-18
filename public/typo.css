@@ -4,7 +4,7 @@
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 @import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
 html:lang(ko) {
-  font-size: 17px; }
+  font-size: 18px; }
 
 /* color */
 /*space*/
@@ -31,12 +31,12 @@ html:lang(ko) {
 
 /*styling*/
 html {
-  font-size: 100%;
-  font-family: "Noto Sans KR", sans-serif;
+  font-size: 120%;
+  font-family: "Daehan", serif;
   line-height: 1.76471rem; }
 
 body {
-  font-size: 100%;
+  font-size: 120%;
   line-height: 1.76471rem; }
 
 p {
@@ -44,7 +44,7 @@ p {
   margin-bottom: 15px; }
 
 h1 {
-  font-size: 300%; }
+  font-size: 200%; }
 
 h2 {
   margin-top: 90px;
@@ -56,7 +56,7 @@ h3 ~ h2 {
   margin-top: 0; }
 
 h3 {
-  font-size: 100%;
+  font-size: 120%;
   margin-top: 15px; }
 
 blockquote {
