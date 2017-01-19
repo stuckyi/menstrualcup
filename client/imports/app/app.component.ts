@@ -28,26 +28,14 @@ export class AppComponent implements OnInit {
     { id:5, name: '장단점', name_eng: 'proscons', url:'/proscons' }
   ];
 
-  onUpdate(e) {
-    console.log(e.clickname);
-    
-    let step = document.getElementById('#intro-structure'); 
-    // console.log(document);
-    // skrollr.animateTo(this.s.relativeToAbsolute(step, 'top', 'top'));
-    // console.log(skrollr);
-  }
 
   
 
   constructor(private ref: ElementRef) { 
-    //set html lang '' to ko
-    // console.log(ref.nativeElement);
-    // console.log(ref.nativeElement.parentNode.parentNode.lang);
+    //set html lang to 'ko'.
     ref.nativeElement.parentNode.parentNode.lang = "ko";
-    // console.log(ref.nativeElement.parentNode.parentNode.lang);
+    // skrollr libaray init.
     this.skrollrInit();
-    
-
   }
 
   skrollrInit() {
@@ -90,8 +78,8 @@ export class AppComponent implements OnInit {
     
         //이 이벤트는 우리가 새로운 hash로 jump/animatie하기 직전에 트리거된다.
         change: function (newHash, newTopPosition) {
-          let testEl = document.getElementById(newHash);
-          console.log(testEl);
+          let testEl = document.getElementById('intro-structure');
+          // console.log(testEl.offsetTop);
           console.log('newHash', newHash);
           console.log('newTopPosition', newTopPosition);
             //Do stuff
@@ -106,8 +94,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     console.log('AppComponent ngOnInit');
-    // this.skrollrInit();
-    // this.skrollrInit();
     this.selectedMenu = '생리컵이란';
   }
 
@@ -116,8 +102,6 @@ export class AppComponent implements OnInit {
   onMenu(menu){
     console.log(menu);
     this.selectedMenu = menu;
-
-    
     this.gotoTop(); // 페이지 최상단으로 이동 
   }
 

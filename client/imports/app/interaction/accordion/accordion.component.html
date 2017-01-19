@@ -11,7 +11,8 @@
 
         <div class="item-container" >
                 <div class="items" 
-                [@selectedIndex]="selectedIndex" *ngIf="indexState.intro">
+                [@selectedIndex]="selectedIndex"
+                *ngIf="indexState.intro">
                         <a href="#intro-concept">
                                 <span>생리컵</span>
                         </a>
@@ -33,7 +34,7 @@
 
 
 
-        <!--principle-->
+        <!--principle depth 1-->
         <div class="index"(click)="onIndex('principle')">
                 <a routerLink="/principle" routerLinkActive="active">
                         <span [class.selected]="indexState.principle" >작동원리</span>
@@ -43,22 +44,35 @@
         </div>
         
 
-
+        <!-- principle depth2 -->
         <div class="item-container">
+
+                <!-- principle 2-1 -->
                 <div class="items"
-                 (click)="skrollrAnimateTo('principle-1', $event)"
+                 (click)="gotoItem('principle-1')"
                  [@selectedIndex]="selectedIndex" *ngIf="indexState.principle">
                         <span>기본 원리</span>
                  </div>
+
+                 <!-- principle 2-2 -->
                 <div class="items" 
-                [@selectedIndex]="selectedIndex"
-                *ngIf="indexState.principle"><span>생리혈의 양 </span></div>
-                <div class="items" [@selectedIndex]="selectedIndex" *ngIf="indexState.principle"><span>생리혈의 특성</span></div>
+                (click)="gotoItem('principle-2')"
+                [@selectedIndex]="selectedIndex" *ngIf="indexState.principle">
+                        <span>생리혈의 양 </span>
+                </div>
+
+                <!-- principle 2-3 -->
+                <div class="items"
+                (click)="gotoItem('principle-3')"
+                 [@selectedIndex]="selectedIndex" *ngIf="indexState.principle">
+                        <span>생리혈의 특성</span>
+                </div>
+
         </div>
 
 
 
-        <!--usage-->
+        <!-- usage depth1 -->
         <div class="index"(click)="onIndex('usage')">
                 <a routerLink="/usage" routerLinkActive="active">
                         <span [class.selected]="indexState.usage" >사용법</span>
@@ -68,17 +82,35 @@
         </div>
         
 
-
+        <!-- usage depth2 -->
         <div class="item-container">
-                <div class="items" [@selectedIndex]="selectedIndex" *ngIf="indexState.usage"><span>기본 사용법</span></div>
-                <div class="items" [@selectedIndex]="selectedIndex"*ngIf="indexState.usage"><span>사용하는 단계</span></div>
-                <div class="items" [@selectedIndex]="selectedIndex" *ngIf="indexState.usage"><span>1단계 손씻고 준비</span></div>
+                <!-- usage 2-1 -->
+                <div class="items"
+                        (click)="gotoItem('usage-1')"
+                        [@selectedIndex]="selectedIndex" *ngIf="indexState.usage">
+                                <span>기본 사용법</span>
+                </div>
+                
+                <!-- usage 2-2 -->
+                <div class="items"
+                        (click)="gotoItem('usage-2')"
+                        [@selectedIndex]="selectedIndex" *ngIf="indexState.usage">
+                                <span>사용하는 단계</span>
+                 </div>
+                
+                <!-- usage 2-3 -->
+                <div class="items"
+                        (click)="gotoItem('usage-3')"
+                        [@selectedIndex]="selectedIndex" *ngIf="indexState.usage">
+                                <span>1단계 손씻고 준비</span>
+                </div>
+
         </div>
 
 
 
 
-        <!--product-->
+        <!-- product depth 1 -->
         <div class="index"(click)="onIndex('product')">
                 <a routerLink="/product" routerLinkActive="active">
                         <span [class.selected]="indexState.product" >제품설명</span>
@@ -88,10 +120,21 @@
         </div>
         
 
-
+        <!-- product depth 2 -->
         <div class="item-container">
-                <div class="items" [@selectedIndex]="selectedIndex" *ngIf="indexState.product"><span>나에게 맞는 제품찾기</span></div>
+
+                <!-- product 2-1 -->
+                <div class="items"
+                        (click)="gotoItem('product-1')"
+                        [@selectedIndex]="selectedIndex" *ngIf="indexState.product">
+                                <span>나에게 맞는 제품찾기</span>
+                </div>
+
+                <!-- product 2-2 -->
                 <div class="items" [@selectedIndex]="selectedIndex"*ngIf="indexState.product"><span>제품 찾기의 어려움</span></div>
+                
+                
+                <!-- product 2-3 -->
                 <div class="items" [@selectedIndex]="selectedIndex" *ngIf="indexState.product"><span>생리컵 필터링 뷰(가제)</span></div>
         </div>
 

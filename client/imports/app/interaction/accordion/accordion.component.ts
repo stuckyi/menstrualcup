@@ -1,6 +1,5 @@
 import {
-        Component, OnInit, Input, trigger, state, style, transition, animate, keyframes,
-Output, EventEmitter} from '@angular/core';
+        Component, OnInit, Input, trigger, state, style, transition, animate, keyframes} from '@angular/core';
 
 
 
@@ -35,7 +34,7 @@ import template from './accordion.component.html';
 export class AccordionComponent implements OnInit {
         
 
-        @Output() update = new EventEmitter();
+        
 
         selectedIndex: string;
         
@@ -55,12 +54,11 @@ export class AccordionComponent implements OnInit {
 
         //depth2 목록 클릭시 발생하는 이벤트.
         //어떤 항목을 클릭했는지 AppComponent로 전달한다.
-        skrollrAnimateTo(clickname: string, e: Event) {
-                console.log('event', e);
-                // let targetEl = document.getElementsByClassName('text')[0].childNodes;
-                let targetEl = document.getElementById('principle-2').scrollTop;
-                console.log(targetEl);
-                this.update.emit({ clickname });
+        gotoItem(clickname: string) {
+                
+                let targetY = document.getElementById(clickname).offsetTop;
+                window.scrollTo(0, targetY);
+                
         }
 
         onIndex(indexName: string) {
