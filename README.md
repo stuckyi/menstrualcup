@@ -67,7 +67,7 @@ sass --watch ./public/.
 ---
 
 - 기본적으로는 수정이 되면 ng2가 자동으로 `localhost:3000` 페이지를 새로고침한다.
-- 
+
 
 
 
@@ -80,9 +80,8 @@ git commit -m "feat(add): add btn" //commit과 commit message 등록
 
 ## 변경내용 로컬 저장소의 master 브랜치로 통합하기 
 
+```
 git push -u origin master // git push -u [푸시받을 원격저장소] [푸시할 로컬브랜치]
-
-
 ```
 
 
@@ -112,7 +111,9 @@ fourseven:scss  added, version 3.13.0
 
 fourseven:scss: Style with attitude. Sass and SCSS support for Meteor.js.
 ```
+
 만약 이것을 사용하기를 원한다면, 가지고있는 pacakge control file에 (다음과 같은) `onUse` block을 추가한다.
+
 ```
 Package.onUse(function (api) {
   ...
@@ -140,6 +141,49 @@ sass --watch ./public/. //public 폴더의 전체파일
 
 
 
+
+---
+
+
+## sns share
+- [sns share : facebook param에 대한 블로그글](http://bbyong79.tistory.com/69)
+
+일반적으로 페이스북 공유하기 기능을 추가하는 방법은 크게 2가지가 있다.
+1. 새로나온 자바스크립트 SDK 방식
+  - `FB.ui()`로 공유하기 팝업을 불러내고, 공유가 성공/실패 여부를 콜백으로 받을 수도 있다.
+2. 기존 `https://www.facebook.com/sharer/sharer.php` 방식
+  - 일반적인 형태 
+    - `"https://www.facebook.com/sharer/sharer.php?s=100&p[title]=제목&p[summary]=요약내용&p[url]=링크&p[images][0]=썸네일이미지경로"`
+    -  `[images][0]` 이 `"og:image"` 메타태그와, `[summary]` 가 `"og:description"` 메타태그와, `[title]`가 `"og:title"` 메타 태그와 우연히 동일해서 데이터가 똑바로 나온 것이다
+    - 결론
+      - `https://www.facebook.com/sharer/sharer.php?s=100&p[title]=제목&p[summary]=요약내용&p[url]=링크&p[images][0]=썸네일이미지경로` : 이 경로에 대하여 `[title]=제목&p[summary]=요약내용`, `[images][0]=썸네일이미지경로` 파라미터는 불필요한 것이다. 여기서 제대로 전달되고, 활용되는 것은 오직 URL 뿐이다.
+      - 페이스북에서 url 파라미터의 값을 받아서 해당 url 의 페이지를 읽어들인다. 그리고 그 페이지에서 og 태그가 있으면 og 태그에 맞는 정보를 공유하기 팝업에 뿌려주고 그렇지 않으면 아무런 정보도 뿌려주지 않는다.
+
+### 예시
+
+- [예시링크](https://www.facebook.com/sharer/sharer.php?s=100&p[title]=테스트입니다&p[summary]=요약내용입니다.&p[url]=http://bbyong79.tistory.com/66&p[images][0]=http://www.okjsp.net/profile/24029.jpg)
+
+위의 링크를 클릭해보면 title, summary, images는 전혀 적용이 안되는 것을 볼 수 있다.
+적용이 되는 것은 단지 url 뿐이고, 해당 url 에 있는 og 태그의 정보를 가지고 와서 공유팝업에 뿌려주는 것을 눈으로 확인할 수 있다.
+
+- 출처: http://bbyong79.tistory.com/69 [어느 천년에...]
+
+
+- [관련 블로그](http://cocosoft.kr/372)
+
+
+
+
+### for developers
+
+- [twitter for developers](https://dev.twitter.com/web/javascript/initialization)
+- [kakao for developers](https://developers.kakao.com/docs/social-plugins/story-share)
+
+### OG protocol
+- [OG protocol api docs](http://opengraphprotocol.org/)
+
+
+---
 ##modal ref
 - [w3school modal example](http://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal2)
 - [w3school modal ref](http://www.w3schools.com/howto/howto_css_modals.asp)

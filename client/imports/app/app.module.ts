@@ -6,11 +6,17 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module'; 
 import { AppComponent } from './app.component';
 
-import { HomeComponent } from './home/home.component';
+//interaction
 import { ScrollComponent } from './interaction/scroll/scroll.component';
 import { AccordionComponent } from './interaction/accordion/accordion.component';
 import { GotoTopComponent } from './interaction/gototop/gototop.component';
 
+//util
+import { SocialComponent } from './util/social/social.component';
+
+
+//app
+import { HomeComponent } from './home/home.component';
 import { IntroComponent } from './intro/intro.component';
 import { PrincipleComponent } from './principle/principle.component';
 import { UsageComponent } from './usage/usage.component';
@@ -38,7 +44,8 @@ import { Page404Component } from './page404.component';
     Page404Component,
     ScrollComponent,
     AccordionComponent,
-    GotoTopComponent
+    GotoTopComponent,
+    SocialComponent
   ],
   bootstrap: [
     AppComponent

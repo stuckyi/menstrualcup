@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import { ScrollComponent } from './interaction/scroll/scroll.component';
 import { AccordionComponent } from './interaction/accordion/accordion.component';
 import { GotoTopComponent } from './interaction/gototop/gototop.component';
-
+import { SocialComponent } from './util/social/social.component'
 import template from './app.component.html';
 import styles from '../../../public/sass/main.css';
 
@@ -111,5 +111,6 @@ export class AppComponent implements OnInit {
     window.scrollTo(0, 0);
   }
 
-  
+
+
 }
