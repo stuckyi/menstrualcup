@@ -384,12 +384,41 @@ a.link {
 }
 
 .cup_structure{
+    background-color: $bg-color;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
     margin: 0 auto;
-    width: 320px;
+    width: 640px;
 
-    > img {
-      width: 100%;
+    div{
+      padding : 15px 10px;
     }
+
+    :first-child{
+      width: 60%;
+     
+      > img {
+      width: 100%;
+      }
+
+    }
+
+    :last-child{
+      width: 30%;
+      font-size: $fontSize5;
+      font-color: $fontCol-blockquote;
+
+    }
+}
+
+.cups_compare{
+  margin: 0 auto;
+  width: 649px;
+
+  > img{
+    width: 100%;
+  }
 }
 
 
