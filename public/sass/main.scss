@@ -83,7 +83,13 @@ a {
 }
 a:visited,
 a:link {
-  color: $main-color-dark;
+  color: $main-color-light;
+}
+
+a.link {
+  text-decoration: underline;
+  -moz-text-decoration-color: $main-color-light; /* Code for Firefox */
+  text-decoration-color: $main-color-light;
 }
 
 
@@ -155,7 +161,7 @@ a:link {
 
 .intro {
   position: relative;
-  @include size(100%, 300px);
+  @include size(100%, 450px);
   background-color: $bgCol-intro;
 }
 
@@ -167,7 +173,7 @@ a:link {
 .dot{
   @include size(50px, 50px);
   margin: 0 auto;
-  margin-top: 18px;
+  margin-top: 30px;
   padding-top: 5px;
   background-image: url(./img/170118circle.png);
   background-repeat: no-repeat;
@@ -391,4 +397,5 @@ a:link {
       width: 100%;
     }
 }
+
 

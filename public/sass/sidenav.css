@@ -453,14 +453,14 @@ html:lang(ko) {
   #sideNav .items span {
     font-size: 90%; }
   #sideNav span {
-    color: #00C4C4;
-    font-weight: 200;
+    color: black;
+    font-weight: 400;
     margin-left: 10px; }
   #sideNav span.selected {
-    color: #00C4C4;
+    color: black;
     font-weight: 500; }
   #sideNav i {
-    color: #00C4C4;
+    color: black;
     vertical-align: middle; }
 
 /*# sourceMappingURL=sidenav.css.map */
