@@ -1735,9 +1735,27 @@ a.link {
     height: auto; }
 
 .cup_structure {
+  background-color: #efefef;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
   margin: 0 auto;
-  width: 320px; }
-  .cup_structure > img {
+  width: 640px; }
+  .cup_structure div {
+    padding: 15px 10px; }
+  .cup_structure :first-child {
+    width: 60%; }
+    .cup_structure :first-child > img {
+      width: 100%; }
+  .cup_structure :last-child {
+    width: 30%;
+    font-size: 90%;
+    font-color: darkgray; }
+
+.cups_compare {
+  margin: 0 auto;
+  width: 649px; }
+  .cups_compare > img {
     width: 100%; }
 
 /*# sourceMappingURL=main.css.map */
