@@ -1,6 +1,6 @@
 <div id="sideNav" >
 
-        <!--intro-->
+        <!-- intro depth1 -->
         <div class="index" (click)="onIndex('intro')">
                 <a routerLink="/intro" routerLinkActive="active">
                         <span [class.selected]="indexState.intro">생리컵이란?</span>
@@ -9,26 +9,35 @@
                 <i class="material-icons" *ngIf="indexState.intro">expand_less</i> 
         </div>
 
+        <!-- intro depth 2 -->
         <div class="item-container" >
+
+                <!-- intro 2-1 -->
                 <div class="items" 
-                [@selectedIndex]="selectedIndex"
-                *ngIf="indexState.intro">
-                        <a href="#intro-concept">
-                                <span>생리컵</span>
-                        </a>
+                        (click)="gotoItem('intro-1')"
+                        [@selectedIndex]="selectedIndex" *ngIf="indexState.intro">
+                                <span>생리컵이란?</span>
                 </div>
 
+                <!-- intro 2-2 -->
                 <div class="items"
-                        [@selectedIndex]="selectedIndex"
-                        *ngIf="indexState.intro">
-                        <a href="#intro-structure">
+                        (click)="gotoItem('intro-2')"
+                        [@selectedIndex]="selectedIndex"*ngIf="indexState.intro">
                                 <span>생리컵의 구조</span>
-                        </a>
                 </div>
-                <div class="items" [@selectedIndex]="selectedIndex"*ngIf="indexState.intro">
-                        <a href="#intro-structure">
-                                <span>intro-test</span>
-                        </a>
+
+                <!-- intro 2-3 -->
+                <div class="items"
+                        (click)="gotoItem('intro-3')"
+                         [@selectedIndex]="selectedIndex"*ngIf="indexState.intro">
+                                <span>생리컵을 왜 써요?</span>
+                </div>
+
+                <!-- intro 2-4 -->
+                <div class="items"
+                        (click)="gotoItem('intro-4')"
+                         [@selectedIndex]="selectedIndex"*ngIf="indexState.intro">
+                                <span>생리컵의 역사</span>
                 </div>
         </div>
 
@@ -51,7 +60,7 @@
                 <div class="items"
                  (click)="gotoItem('principle-1')"
                  [@selectedIndex]="selectedIndex" *ngIf="indexState.principle">
-                        <span>기본 원리</span>
+                        <span>작동 원리</span>
                  </div>
 
                  <!-- principle 2-2 -->
@@ -88,21 +97,21 @@
                 <div class="items"
                         (click)="gotoItem('usage-1')"
                         [@selectedIndex]="selectedIndex" *ngIf="indexState.usage">
-                                <span>기본 사용법</span>
+                                <span>생리컵을 사용하는 단계</span>
                 </div>
                 
                 <!-- usage 2-2 -->
                 <div class="items"
                         (click)="gotoItem('usage-2')"
                         [@selectedIndex]="selectedIndex" *ngIf="indexState.usage">
-                                <span>사용하는 단계</span>
+                                <span>생리컵 사용 과정 흐름도</span>
                  </div>
                 
                 <!-- usage 2-3 -->
                 <div class="items"
                         (click)="gotoItem('usage-3')"
                         [@selectedIndex]="selectedIndex" *ngIf="indexState.usage">
-                                <span>1단계 손씻고 준비</span>
+                                <span>단계별 사용법</span>
                 </div>
 
         </div>
@@ -127,21 +136,30 @@
                 <div class="items"
                         (click)="gotoItem('product-1')"
                         [@selectedIndex]="selectedIndex" *ngIf="indexState.product">
-                                <span>나에게 맞는 제품찾기</span>
+                                <span>어떤 생리컵에 대한 정보를 제공?(수정필요)</span>
                 </div>
 
                 <!-- product 2-2 -->
-                <div class="items" [@selectedIndex]="selectedIndex"*ngIf="indexState.product"><span>제품 찾기의 어려움</span></div>
+                <div class="items" 
+                        (click)="gotoItem('product-2')"
+                        [@selectedIndex]="selectedIndex" *ngIf="indexState.product">
+                                <span>나에게 맞는 제품찾기</span>
+                </div>
                 
                 
                 <!-- product 2-3 -->
-                <div class="items" [@selectedIndex]="selectedIndex" *ngIf="indexState.product"><span>생리컵 필터링 뷰(가제)</span></div>
+                <div class="items"
+                        (click)="gotoItem('product-3')"
+                         [@selectedIndex]="selectedIndex" *ngIf="indexState.product">
+                                <span>생리컵 필터링 뷰(가제)</span>
+                </div>
+
         </div>
 
 
 
 
-        <!--proscons-->
+        <!-- proscons depth1 -->
         <div class="index"(click)="onIndex('proscons')">
                 <a routerLink="/proscons" routerLinkActive="active">
                         <span [class.selected]="indexState.proscons" >장단점</span>
@@ -151,11 +169,30 @@
         </div>
         
 
-
+        <!-- proscons depth2 -->
         <div class="item-container">
-                <div class="items" [@selectedIndex]="selectedIndex" *ngIf="indexState.proscons"><span>생리컵의 장점</span></div>
-                <div class="items" [@selectedIndex]="selectedIndex"*ngIf="indexState.proscons"><span>생리컵의 단점 </span></div>
-                <div class="items" [@selectedIndex]="selectedIndex" *ngIf="indexState.proscons"><span>사용전 상담이 필요한 경우</span></div>
+
+                <!-- proscons 2-1 -->
+                <div class="items"
+                        (click)="gotoItem('proscons-1')"
+                        [@selectedIndex]="selectedIndex" *ngIf="indexState.proscons">
+                        <span>생리컵의 장점</span>
+                </div>
+
+                <!-- proscons 2-2 -->
+                <div class="items" 
+                        (click)="gotoItem('proscons-2')"
+                        [@selectedIndex]="selectedIndex"*ngIf="indexState.proscons">
+                        <span>생리컵의 단점</span>
+                </div>
+
+                <!-- proscons 2-3 -->
+                <div class="items"
+                        (click)="gotoItem('proscons-3')"
+                        [@selectedIndex]="selectedIndex" *ngIf="indexState.proscons">
+                        <span>사용전 상담이 필요한 경우</span>
+                </div>
+
         </div>
         
 
