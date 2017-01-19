@@ -55,7 +55,8 @@ export class AccordionComponent implements OnInit {
 
         //depth2 목록 클릭시 발생하는 이벤트.
         //어떤 항목을 클릭했는지 AppComponent로 전달한다.
-        skrollrAnimateTo(clickname: string) {
+        skrollrAnimateTo(clickname: string, e: Event) {
+                console.log('event', e);
                 // let targetEl = document.getElementsByClassName('text')[0].childNodes;
                 let targetEl = document.getElementById('principle-2').scrollTop;
                 console.log(targetEl);

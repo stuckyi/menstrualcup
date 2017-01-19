@@ -10,14 +10,25 @@
         </div>
 
         <div class="item-container" >
-                <div class="items" [@selectedIndex]="selectedIndex" *ngIf="indexState.intro">
-                        <a href="#intro-concept" data-menu-top="1000"><span>생리컵</span></a>
+                <div class="items" 
+                [@selectedIndex]="selectedIndex" *ngIf="indexState.intro">
+                        <a href="#intro-concept">
+                                <span>생리컵</span>
+                        </a>
                 </div>
 
-                <div class="items"[@selectedIndex]="selectedIndex"*ngIf="indexState.intro">
-                        <a href="#intro-structure" ><span>생리컵의 구조</span></a>
+                <div class="items"
+                        [@selectedIndex]="selectedIndex"
+                        *ngIf="indexState.intro">
+                        <a href="#intro-structure">
+                                <span>생리컵의 구조</span>
+                        </a>
                 </div>
-                <div class="items" [@selectedIndex]="selectedIndex"*ngIf="indexState.intro"><span>intro3</span></div>
+                <div class="items" [@selectedIndex]="selectedIndex"*ngIf="indexState.intro">
+                        <a href="#intro-structure">
+                                <span>intro-test</span>
+                        </a>
+                </div>
         </div>
 
 
@@ -35,11 +46,13 @@
 
         <div class="item-container">
                 <div class="items"
-                 (click)="skrollrAnimateTo('principle-1')"
+                 (click)="skrollrAnimateTo('principle-1', $event)"
                  [@selectedIndex]="selectedIndex" *ngIf="indexState.principle">
                         <span>기본 원리</span>
                  </div>
-                <div class="items" [@selectedIndex]="selectedIndex"*ngIf="indexState.principle"><span>생리혈의 양 </span></div>
+                <div class="items" 
+                [@selectedIndex]="selectedIndex"
+                *ngIf="indexState.principle"><span>생리혈의 양 </span></div>
                 <div class="items" [@selectedIndex]="selectedIndex" *ngIf="indexState.principle"><span>생리혈의 특성</span></div>
         </div>
 

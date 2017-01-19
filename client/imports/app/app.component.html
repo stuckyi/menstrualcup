@@ -2,34 +2,35 @@
 
 
 <inter-gototop></inter-gototop>
-<inter-scroll></inter-scroll>
+<!--<inter-scroll></inter-scroll>-->
 
 <header class="header">
         <div class="logo">
                 <a routerLink="/home" routerLinkActive="active">안녕, 생리컵?</a>
         </div>
-        <!--
-        <div class="menu">
-                <ul>
-                        <li *ngFor="let menu of menuList">
-                                <a (click)="onMenu(menu.name)"routerLink="{{menu.url}}" routerLinkActive="active">{{menu.name}}</a>
-                        </li>
-                </ul>
-        </div>
-        -->
+        
         <div class="menu">
                 <inter-accordion (update)="onUpdate($event)"></inter-accordion>
         </div>
 </header> 
 
 <div id="wrap">
+        
         <section class="intro">
-                <div class=intro_title> <h1>{{selectedMenu}}</h1></div>
+                <!-- intro area-->
         </section>
         
         <section class="contents">
                 <router-outlet ></router-outlet>
-                
+        </section>
+
+        <section class="footer">
+                <div></div>
+                <div>관련 내용들</div>
+                <div>데이터 출처는 여기에</div>
+                <div>
+                        <button>F</button><button>T</button>
+                </div>
         </section>
         
 </div>
