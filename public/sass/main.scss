@@ -421,4 +421,12 @@ a.link {
   }
 }
 
+.cupinbody{
+  @include size(780px, auto);
+
+  > img{
+    width: 100%;
+  }
+}
+
 

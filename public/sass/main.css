@@ -11,15 +11,12 @@
 @import url(http://fonts.googleapis.com/earlyaccess/kopubbatang.css);
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 @import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
-@import url("https://fonts.googleapis.com/css?family=Roboto:300");
 @import url(http://fonts.googleapis.com/earlyaccess/kopubbatang.css);
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 @import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
-@import url("https://fonts.googleapis.com/css?family=Roboto:300");
 @import url(http://fonts.googleapis.com/earlyaccess/kopubbatang.css);
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 @import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
-@import url("https://fonts.googleapis.com/css?family=Roboto:300");
 html {
   font-size: 17px;
   font-family: sans-serif;
@@ -1756,6 +1753,12 @@ a.link {
   margin: 0 auto;
   width: 649px; }
   .cups_compare > img {
+    width: 100%; }
+
+.cupinbody {
+  width: 780px;
+  height: auto; }
+  .cupinbody > img {
     width: 100%; }
 
 /*# sourceMappingURL=main.css.map */
