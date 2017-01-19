@@ -45,13 +45,13 @@ export class AppComponent implements OnInit {
     // console.log(ref.nativeElement.parentNode.parentNode.lang);
     ref.nativeElement.parentNode.parentNode.lang = "ko";
     // console.log(ref.nativeElement.parentNode.parentNode.lang);
-    
+    this.skrollrInit();
     
 
   }
 
   skrollrInit() {
-    this.s = skrollr.init(/*other stuff*/);
+    this.s = skrollr.init();
     //두 번째 매개변수는 옵션.
     skrollr.menu.init(this.s, {
         
@@ -65,7 +65,7 @@ export class AppComponent implements OnInit {
         //aniamtion의 길이(ms)
         duration: function(currentTop, targetTop) {
             //기본값., the duration is hardcoded at 500ms.
-            return 500;
+            return 1000;
     
             //그러나 현재스크롤위치(`currentTop`)과 목표스크롤위치(`targetTop`)으로 값을 계산할 수 도 있다.
             //return Math.abs(currentTop - targetTop) * 10;
@@ -89,7 +89,11 @@ export class AppComponent implements OnInit {
         complexLinks: false,
     
         //이 이벤트는 우리가 새로운 hash로 jump/animatie하기 직전에 트리거된다.
-        change: function(newHash, newTopPosition) {
+        change: function (newHash, newTopPosition) {
+          let testEl = document.getElementById(newHash);
+          console.log(testEl);
+          console.log('newHash', newHash);
+          console.log('newTopPosition', newTopPosition);
             //Do stuff
         },
     
@@ -102,7 +106,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     console.log('AppComponent ngOnInit');
-    this.skrollrInit();
+    // this.skrollrInit();
     // this.skrollrInit();
     this.selectedMenu = '생리컵이란';
   }

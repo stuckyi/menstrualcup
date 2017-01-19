@@ -118,37 +118,12 @@ a:link {
   top:38%;
 }
 
-.menu ul {
-  @include flex(flex, column wrap);
-  
-  list-style: none;
-  li {
-    @include size(100px, auto);
-    a{ color: $grey; }
-    a.active { color: $main-color-dark; }
-    
-  }
-  
-}
 
 #wrap {
   z-index: 300;
   position: relative;
   @include size(100%, auto);
   min-width: 960px;
-}
-
-.side_bar {
-  z-index: 400;
-  line-height: $lineHeight0;
-  position: fixed;
-  top: 80px;
-  left: 42px;
-  @include size(140px, auto);
-  > ul {
-    list-style: none;
-    font-weight: bold;
-  }
 }
 
 
@@ -163,6 +138,7 @@ a:link {
   @include size(620px, auto);
   margin: 0 auto;
 }
+
 
 .dot{
   @include size(50px, 50px);
@@ -209,12 +185,30 @@ a:link {
   margin: 0 auto;
 }
 
-.intro_title {
-  @include size(620px, auto);
-  position: absolute;
-  left: 282px;
-  bottom: 10px;
+
+/* footer */
+.footer {
+  @include size(100%, 200px);
+  @include flex(flex, row nowrap);
+  justify-content: space-around;
+  align-items: center;
+
+  margin-top: 300px;
+  background-color: $main-color;
+
+  div {
+    border: 1px solid white;
+    @include size(23%, 80%);
+    color:black;
+  }
+
+  div:nth-of-type(1){
+    border:none;
+  }
 }
+
+
+
 
 /* 접는 방법에 대한 표*/
 
