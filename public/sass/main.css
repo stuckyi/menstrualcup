@@ -1757,7 +1757,8 @@ a.link {
 
 .cupinbody {
   width: 780px;
-  height: auto; }
+  height: auto;
+  margin: 0 auto; }
   .cupinbody > img {
     width: 100%; }
 
