@@ -423,7 +423,8 @@ a.link {
 
 .cupinbody{
   @include size(780px, auto);
-
+  margin: 0 auto;
+  
   > img{
     width: 100%;
   }
