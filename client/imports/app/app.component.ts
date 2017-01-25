@@ -1,10 +1,14 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
+import { Parties } from '../../../both/collections/parties.collection';
 
 import { ScrollComponent } from './interaction/scroll/scroll.component';
 import { AccordionComponent } from './interaction/accordion/accordion.component';
 import { GotoTopComponent } from './interaction/gototop/gototop.component';
 import { SocialComponent } from './util/social/social.component'
+
+import { ForumComponent } from './forum/forum.component';
+
 import template from './app.component.html';
 import styles from '../../../public/sass/main.css';
 
@@ -16,6 +20,9 @@ import styles from '../../../public/sass/main.css';
 export class AppComponent implements OnInit {
   selectedMenu: string;
   s: any;
+
+  parties: Observable<any[]>;
+
 
   
 
@@ -32,10 +39,13 @@ export class AppComponent implements OnInit {
   
 
   constructor(private ref: ElementRef) { 
-    //set html lang to 'ko'.
-    ref.nativeElement.parentNode.parentNode.lang = "ko";
-    // skrollr libaray init.
-    this.skrollrInit();
+    //.find 의 반환 값은 Observable 이 될 것이다.
+    //.zone : collection의 변경사항을 view와 연결한다.
+    this.parties = Parties.find({}).zone(); 
+    // console.log(this.parties.source._data);
+
+    ref.nativeElement.parentNode.parentNode.lang = "ko"; //set html lang to 'ko'.
+    this.skrollrInit(); // skrollr libaray init.
   }
 
   skrollrInit() {
@@ -78,11 +88,7 @@ export class AppComponent implements OnInit {
     
         //이 이벤트는 우리가 새로운 hash로 jump/animatie하기 직전에 트리거된다.
         change: function (newHash, newTopPosition) {
-          let testEl = document.getElementById('intro-structure');
-          // console.log(testEl.offsetTop);
-          console.log('newHash', newHash);
-          console.log('newTopPosition', newTopPosition);
-            //Do stuff
+        
         },
     
         //URL에 해시링크(e.g. `#foo`) 추가한다.

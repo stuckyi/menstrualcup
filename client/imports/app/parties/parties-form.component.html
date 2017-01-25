@@ -1,0 +1,10 @@
+<form class="party" (ngSubmit)="addParty()" [formGroup]="addForm">
+<label>주제</label>
+<input type="text" formControlName="name">
+<label>요약</label>
+<input type="text" formControlName="description">
+<label>장소</label>
+<input type="text" formControlName="location">
+
+<button class="forum-submit" type="submit">+</button>
+</form>
