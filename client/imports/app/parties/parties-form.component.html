@@ -1,3 +1,4 @@
+<div *ngIf="!user"> Please, log in to change party!</div>
 <form class="party" (ngSubmit)="addParty()" [formGroup]="addForm">
 <label>주제</label>
 <input type="text" formControlName="name">
@@ -5,6 +6,9 @@
 <input type="text" formControlName="description">
 <label>장소</label>
 <input type="text" formControlName="location">
+
+<label>Public</label>
+<input type="checkbox" formControlName="public">
 
 <button class="forum-submit" type="submit">+</button>
 </form>

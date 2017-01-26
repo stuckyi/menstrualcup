@@ -1,0 +1,24 @@
+<h1>포럼</h1>
+<h2>사람들과 생각을 나누세요</h2>
+<div>
+  <h3>새로운 주제 만들기</h3>
+  <parties-form></parties-form>
+  <input type="text" #searchtext placeholder="Search By Location">
+  <button type="button" (click)="search(searchtext.value)">검색</button>
+  <login-buttons></login-buttons>
+</div>
+<div id="forum-container">
+  <h3>지금 이루어지고 있는 이야기들</h3>
+
+  <div class="forum-header">
+        <span>주제</span> <span>요약</span>  <span>장소</span>  <span>-</span>
+  </div>
+
+  <div class="forum-row" *ngFor="let party of parties | async">
+    <span><a [routerLink]="['/party', party._id]">{{party.name}}</a> </span>
+    <span>{{party.description}}</span>
+    <span>{{party.location}}</span>
+    <button class="forum-submit" (click)="removeParty(party)">X</button>
+  </div>
+
+</div>

@@ -2,8 +2,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AccountsModule } from 'angular2-meteor-accounts-ui';
 
-import { AppRoutingModule } from './app-routing.module'; 
+//root
+import { AppRoutingModule, ROUTES_PROVIDERS} from './app-routing.module'; 
 import { AppComponent } from './app.component';
 
 //mongo
@@ -39,7 +41,8 @@ import { Page404Component } from './page404.component';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AccountsModule
   ],
   declarations: [
     AppComponent,
@@ -57,6 +60,9 @@ import { Page404Component } from './page404.component';
     SocialComponent,
     ...PARTIES_DECLARATIONS,
     ForumComponent
+  ],
+  providers: [
+    ...ROUTES_PROVIDERS
   ],
   bootstrap: [
     AppComponent

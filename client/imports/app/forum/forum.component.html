@@ -4,8 +4,11 @@
 <div>
     <h3>새로운 주제 만들기</h3>
     <parties-form></parties-form>
+    <login-buttons></login-buttons>
 </div>
-<div id="forum-container">
+<!--<div id="forum-container">-->
+<div >
+
     <h3>지금 이루어지고 있는 이야기들</h3>
 
     <div class="forum-header">
@@ -13,9 +16,9 @@
     </div>
 
     <div class="forum-row" *ngFor="let party of parties | async">
-        <div>  <span> {{party.name}} </span> </div>
-        <div> <span> {{party.description}} </span> </div>
-        <div> <span> {{party.location}} </span> </div>
-        <div> <button class="forum-submit" (click)="removeParty(party)"> X </button> </div>
+        <span><a [routerLink]="['/party', party._id]">{{party.name}}</a> </span> 
+        <span> {{party.description}} </span>
+        <span> {{party.location}} </span> 
+        <button class="forum-submit" (click)="removeParty(party)"> X </button>
     </div>
 </div>

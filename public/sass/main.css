@@ -1861,6 +1861,8 @@ form.party {
   form.party label {
     font-size: 14px; }
   form.party button {
+    width: 30px;
+    height: auto;
     font-weight: 100;
     font-size: 18px;
     border: .5px solid black;
@@ -1894,23 +1896,20 @@ form.party {
     display: flex;
     flex-flow: row nowrap;
     border: none; }
-    #forum-container div.forum-row div {
+    #forum-container div.forum-row span {
       border: none;
       width: 32%;
       height: auto;
       display: flex;
       flex-flow: row nowrap;
       padding: 4px; }
-    #forum-container div.forum-row div:last-of-type {
+    #forum-container div.forum-row button {
       width: 4%;
-      height: auto; }
-      #forum-container div.forum-row div:last-of-type button {
-        width: 100%;
-        height: 30px;
-        font-weight: 100;
-        font-size: 18px;
-        border: .5px solid black;
-        background: none; }
+      height: 30px;
+      font-weight: 100;
+      font-size: 18px;
+      border: .5px solid black;
+      background: none; }
 
 /*space*/
 /*style reset*/

@@ -1,3 +1,45 @@
+# meteor command
+
+
+## Removing insecure
+
+- 하지 않을 경우 모든 클라이언트가 `party`를 볼 수 있을 뿐 아니라, 누구나 해당 `party`를 변경할 수 있다. 또한 변경된 결과는 다른 사용자의 view에도 나타나게 된다.
+
+meteor는 빠른 구성을 위해 `insecure`라는 패키지를 자동으로 포함하고있다. 이름에서 알 수 있듯이, 이 패키지는 `meteor collection`에 기본적인 `behavior`를 제공하여 모든 읽기 쓰기를 가능하게 해준다. 이 `insecure` 패키지를 제거한다.
+
+```bash
+meteor remove insecure
+```
+
+`insecure`패키지를 제거하면 기본 behavior가 "모두 거부됨"으로 변경된다.
+
+
+
+## User Accounts 설정하기
+다음 중 하나라도 해당되면 사용자가 데이터를 변경할 수 있다.
+
+- 사용자가 로그인 했을 때
+- 사용자가 파티를 만들었을 때
+- 사용자가 관리자일 때
+
+```bash
+meteor add accounts-password
+```
+
+다음으로 `angular2-meteor-accounts-ui` 라는 패키지를 설치한다. 이 패키지안에는 user operation forms 를 구성하는 데 필요한 HTML, CSS 파일이 들어있다.
+
+```bash
+meteor npm install --save angular2-meteor-accounts-ui
+```
+
+**AccountsModule import 하기**
+
+`app.module.ts` 의 `imports`안에 넣어주면된다.
+
+
+
+
+
 # share workflow
 ---
 ## 최초 1번만 할 것

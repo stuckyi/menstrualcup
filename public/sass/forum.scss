@@ -9,6 +9,11 @@
 // $test-border: 1px solid lime;
 $test-border: none;
 
+//font size
+$header-text-size: 14px; // for develop
+$item-text-size: 14px; // for develop
+
+
 
 form.party {
     margin:20px;
@@ -17,6 +22,7 @@ form.party {
         font-size:14px;
     }
     button {
+        @include size(30px, auto);
         font-weight:100;
         font-size:18px;
         border: .5px solid black;
@@ -35,7 +41,7 @@ form.party {
         @include flex(flex, row nowrap);
         margin-top:20px;
 
-        font-size:14px; //for develop
+        font-size: $header-text-size;
         text-align: center;
         background-color: $grey-100;
         span {
@@ -48,36 +54,26 @@ form.party {
 
     div.forum-row {
         margin-top:2px;
-        font-size:14px; //for develop
+        font-size: $item-text-size;
         @include size(100%, auto);
         @include flex(flex, row nowrap);
         border: $test-border;
-        
 
-        
-
-
-        div{
+        //item text
+        span{
             border: $test-border;
             @include size(32%, auto);
             @include flex(flex, row nowrap);
             padding:4px;
         }
-        //button div
-        div:last-of-type {
-            @include size(4%, auto);
-            
-            button {
-                @include size(100%, 30px);
-                font-weight:100;
-                font-size:18px;
-                border: .5px solid black;
-                background: none;
-            }
-
+        //close button
+        button {
+            @include size(4%, 30px);
+            font-weight:100;
+            font-size:18px;
+            border: .5px solid black;
+            background: none;
         }
-        
-
     }
 
 
