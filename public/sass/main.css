@@ -2062,21 +2062,63 @@ a.link {
 
 /* footer */
 .footer {
+  display: flex;
+  flex-flow: column nowrap;
   width: 100%;
   height: 200px;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 300px;
-  background-color: #F7FF8D; }
-  .footer div {
-    border: 1px solid white;
-    width: 23%;
-    height: 80%;
-    color: black; }
-  .footer div:nth-of-type(1) {
-    border: none; }
+  margin-top: 300px; }
+  .footer div.footer-top {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    /* 주축의 끝점으로 붙인다 */
+    align-items: center;
+    padding-right: 30px;
+    background-color: #F7FF8D; }
+    .footer div.footer-top div.contents-link {
+      width: 66%;
+      height: 80%;
+      display: flex;
+      flex-flow: row nowrap;
+      color: black; }
+      .footer div.footer-top div.contents-link div {
+        display: flex;
+        flex-flow: column nowrap;
+        width: 100%;
+        height: auto; }
+        .footer div.footer-top div.contents-link div a {
+          line-height: 2;
+          text-decoration: none;
+          font-size: 11px;
+          color: #9E9E9E; }
+          .footer div.footer-top div.contents-link div a:hover {
+            color: black; }
+        .footer div.footer-top div.contents-link div a:nth-of-type(1) {
+          margin-bottom: 4px;
+          font-weight: 500;
+          font-size: 14px;
+          color: black; }
+          .footer div.footer-top div.contents-link div a:nth-of-type(1):hover {
+            font-weight: bold; }
+    .footer div.footer-top div.social {
+      width: 10%;
+      height: 80%; }
+      .footer div.footer-top div.social img.social-icons {
+        width: 22px;
+        height: 22px;
+        opacity: 0.8; }
+        .footer div.footer-top div.social img.social-icons:hover {
+          opacity: 1;
+          width: 24px;
+          height: 24px; }
+  .footer div.footer-bottom {
+    width: 100%;
+    height: 10%;
+    background-color: #F7FF8D;
+    text-align: center;
+    font-size: 70%; }
 
 /* 접는 방법에 대한 표*/
 .fold {

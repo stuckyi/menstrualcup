@@ -13,7 +13,7 @@ import { ProsconsComponent } from './proscons/proscons.component';
 import { PartiesListComponent } from './parties/parties-list.component';
 import { PartyDetailsComponent } from './parties/party-details.component';
 
-import { Page404Component } from './page404.component';
+import { Page404Component } from './util/page404/page404.component';
 
 
 const routes: Routes = [

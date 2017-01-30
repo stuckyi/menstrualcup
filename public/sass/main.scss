@@ -195,23 +195,84 @@ a.link {
 
 /* footer */
 .footer {
+  @include flex(flex, column nowrap);
   @include size(100%, 200px);
-  @include flex(flex, row nowrap);
-  justify-content: space-around;
-  align-items: center;
+  margin-top: 300px; // 콘텐츠 하단에 여백을 주기위함 
+  
 
-  margin-top: 300px;
-  background-color: $main-color;
+  
+  div.footer-top {
+    @include size(100%, 90%);
+    @include flex(flex, row nowrap);
+    justify-content: flex-end; /* 주축의 끝점으로 붙인다 */
+    align-items: center;
+    padding-right: 30px;
+    background-color: $main-color;
 
-  div {
-    border: 1px solid white;
-    @include size(23%, 80%);
-    color:black;
+    //all section (without social)
+    div.contents-link {
+      @include size(66%, 80%);
+      @include flex(flex, row nowrap);
+
+      // each section
+      div {
+        @include flex(flex, column nowrap);
+        @include size(100%, auto);
+        
+
+        // section item list
+        a {
+          line-height:$lineHeight1;
+          text-decoration: none;
+          font-size:11px;
+          color:$grey-500;
+
+          &:hover {
+            color:black;
+          }
+        }
+        // section title
+        a:nth-of-type(1){
+          margin-bottom: 4px;
+          font-weight:500;
+          font-size:14px;
+          color:black;
+
+          &:hover {
+            font-weight:bold;
+          }
+        }
+
+      }
+      color:black;
+    }
+
+
+    div.social{
+      @include size(10%, 80%);
+      img.social-icons{ 
+        @include size(22px, 22px); 
+        opacity:0.8;
+        &:hover{
+          opacity:1;
+          @include size(24px, 24px); 
+        }
+      }
+
+    }
+
   }
 
-  div:nth-of-type(1){
-    border:none;
+  // copyright area
+  div.footer-bottom {
+    @include size(100%, 10%);
+    background-color: $main-color;
+    text-align:center; 
+    font-size:$fontSize-copyright;
+
   }
+  
+
 }
 
 

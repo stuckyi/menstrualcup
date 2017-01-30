@@ -28,15 +28,60 @@
                 <router-outlet ></router-outlet>
         </section>
 
+
+
         <section class="footer">
-                <div></div>
-                <div>관련 내용들</div>
-                <div>데이터 출처는 여기에</div>
-                <div>   
+                
+                <div class="footer-top">
+                        <!-- contents link -->
+                        <div class="contents-link">
+                                <div>
+                                        <a href="#">생리컵이란?</a>
+                                        <a (click)="gotoItem('intro-1')" href="#">기본개념</a>
+                                        <a (click)="gotoItem('intro-2')" href="#">구조</a>
+                                        <a (click)="gotoItem('intro-3')" href="#">왜써요?</a>
+                                        <a (click)="gotoItem('intro-4')" href="#">생리컵의 역사</a>
+                                </div>
+                                <div>
+                                        <a href="#">작동원리</a>
+                                        <a (click)="gotoItem('principle-1')" href="#">기본개념</a>
+                                        <a (click)="gotoItem('principle-2')" href="#">생리혈의 양</a>
+                                        <a (click)="gotoItem('principle-3')" href="#">생리혈의 특성</a>
+                                </div>
+                                <div>
+                                        <a href="#">사용법</a>
+                                        <a (click)="gotoItem('usage-1')" href="#">사용하는 단계</a>
+                                        <a (click)="gotoItem('usage-2')" href="#">사용과정 흐름도</a>
+                                        <a (click)="gotoItem('usage-3')" href="#">단계별 사용법</a>
+                                </div>
+                                <div>
+                                        <a href="#">제품설명</a>
+                                        <a (click)="gotoItem('product-1')" href="#">제품설명1</a>
+                                        <a (click)="gotoItem('product-2')" href="#">나에게 맞는 생리컵찾기</a>
+                                        <a (click)="gotoItem('product-3')" href="#">생리컵 필터링 뷰</a>
+                                </div>
+                                <div>
+                                        <a href="#">장단점</a>
+                                        <a (click)="gotoItem('proscons-1')" href="#">장점</a>
+                                        <a (click)="gotoItem('proscons-2')" href="#">단점</a>
+                                        <a (click)="gotoItem('proscons-3')" href="#">상담이 필요해요</a>
+                                </div>
+                        </div>
+
                         <!-- social share button -->
-                        <util-social></util-social>
+                        <div class="social">  
+                                <util-social></util-social>
+                        </div>
+                        
                 </div>
+                <!-- footer-top end-->
+
+                <div class="footer-bottom">
+                        &#9426; stuckyi studio
+                </div>
+                <!-- footer-bottom end-->
         </section>
+
         
 </div>
 

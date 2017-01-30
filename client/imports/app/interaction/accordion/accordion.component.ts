@@ -33,9 +33,6 @@ import template from './accordion.component.html';
 })
 export class AccordionComponent implements OnInit {
         
-
-        
-
         selectedIndex: string;
         
         indexState = {
@@ -57,7 +54,8 @@ export class AccordionComponent implements OnInit {
         gotoItem(clickname: string) {
                 console.log(clickname);
                 let targetEl = document.getElementById(clickname);
-                console.log('targetEl',targetEl);
+                console.log('targetEl', targetEl);
+                
                 let targetY = document.getElementById(clickname).offsetTop;
                 
                 window.scrollTo(0, targetY);
