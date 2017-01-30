@@ -38,8 +38,9 @@
     "babel-runtime": "^6.18.0",
     "bcrypt": "^1.0.2",
     "meteor-rxjs": "0.4.5",
+    "ng2-pagination": "^2.0.0",
     "reflect-metadata": "0.1.8",
-    "rxjs": "5.0.0-rc.4",
+    "rxjs": "^5.0.3",
     "skrollr": "^0.6.26",
     "web-animations-js": "^2.2.2",
     "zone.js": "0.7.2"

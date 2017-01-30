@@ -4,6 +4,8 @@ import { Party } from '../models/party.model';
 
 export const Parties = new MongoObservable.Collection<Party>('parties');
 
+
+
 function loggedIn() {
     return !!Meteor.user();
 }

@@ -22,3 +22,5 @@ dispatch:mocha-phantomjs
 shell-server@0.2.1
 underscore
 accounts-password
+tmeasday:publish-counts
+anti:fake

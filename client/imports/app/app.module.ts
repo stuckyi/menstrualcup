@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AccountsModule } from 'angular2-meteor-accounts-ui';
+import { Ng2PaginationModule } from 'ng2-pagination';
+
 
 //root
 import { AppRoutingModule, ROUTES_PROVIDERS} from './app-routing.module'; 
@@ -42,7 +44,8 @@ import { Page404Component } from './page404.component';
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    AccountsModule
+    AccountsModule,
+    Ng2PaginationModule
   ],
   declarations: [
     AppComponent,

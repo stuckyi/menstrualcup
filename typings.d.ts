@@ -127,3 +127,7 @@ declare namespace Chai {
     always: SpyCalledAlways;
   }
 }
+
+declare var Fake: {
+    sentence(words: number): string;
+}

@@ -21,4 +21,17 @@
     <button class="forum-submit" (click)="removeParty(party)">X</button>
   </div>
 
+
+  <h1>Parties:</h1>
+
+  <div>
+    <select #sort (change)="changeSortOrder(sort.value)">
+      <option value="1" selected>Ascending</option>
+      <option value="-1">Descending</option>
+    </select>
+  </div>
+
+
+
+  <pagination-controls (pageChange)="onPageChanged($event)"></pagination-controls>
 </div>
