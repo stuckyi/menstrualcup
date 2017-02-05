@@ -20,41 +20,16 @@ import styles from '../../../public/sass/main.css';
 })
 export class AppComponent implements OnInit {
   selectedMenu: string;
-  s: any;
 
   parties: Observable<any[]>;
-
-
-  
-
-  menuList = [
-    { id:0, name: '생리컵이란', name_eng: 'intro', url:'/intro' },
-    { id:1, name: '작동원리', name_eng: 'principle', url:'/principle' },
-    { id:2, name: '사용법', name_eng: 'usage', url:'/usage' },
-    { id:3, name: '제품정보', name_eng: 'product', url:'/product' },
-    { id:4, name: '역사', name_eng: 'history', url:'/history' },
-    { id:5, name: '장단점', name_eng: 'proscons', url:'/proscons' }
-  ];
-
-
-  
 
   constructor(private ref: ElementRef) { 
     //.find 의 반환 값은 Observable 이 될 것이다.
     //.zone : collection의 변경사항을 view와 연결한다.
     this.parties = Parties.find({}).zone(); 
-    // console.log(this.parties.source._data);
-
     ref.nativeElement.parentNode.parentNode.lang = "ko"; //set html lang to 'ko'.
-    // this.skrollrInit(); // skrollr libaray init.
+   
   }
-/*
-  skrollrInit() {
-    this.s = skrollr.init();
-    //두 번째 매개변수는 옵션.
-    skrollr.menu.init(this.s);
-  }
-  */
 
 
   ngOnInit() {
@@ -62,8 +37,6 @@ export class AppComponent implements OnInit {
     this.selectedMenu = '생리컵이란';
   }
 
-
-  
   onMenu(menu){
     console.log(menu);
     this.selectedMenu = menu;

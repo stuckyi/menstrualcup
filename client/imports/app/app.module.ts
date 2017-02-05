@@ -32,6 +32,10 @@ import { ProductComponent } from './product/product.component';
 import { HistoryComponent } from './history/history.component';
 import { ProsconsComponent } from './proscons/proscons.component';
 
+//ui
+import { UI_DECLARATIONS } from './ui';
+
+
 //forum
 import { ForumComponent } from './forum/forum.component';
 
@@ -54,6 +58,7 @@ import { ForumComponent } from './forum/forum.component';
     ProductComponent,
     HistoryComponent,
     ProsconsComponent,
+    ...UI_DECLARATIONS,
     ...UTIL_DECLARATIONS,
     ...INTERACTION_DECLARATIONS,
     ...PARTIES_DECLARATIONS,

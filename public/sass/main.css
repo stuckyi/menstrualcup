@@ -1405,24 +1405,81 @@ html:lang(ko) {
     opacity: 1; }
   to {
     opacity: 0; } }
-#backToTop {
-  z-index: 400;
-  position: fixed;
-  bottom: 4%;
-  right: 2%;
-  width: 40px;
-  height: 40px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  background-clip: padding-box;
-  /* stops bg color from leaking outside the border: */
-  background-color: #F7FF8D;
-  text-align: center; }
-  #backToTop i {
-    padding: 8px;
-    color: white;
-    vertical-align: middle; }
+form.party {
+  margin: 20px; }
+  form.party label {
+    font-size: 14px; }
+  form.party button {
+    width: 30px;
+    height: auto;
+    font-weight: 100;
+    font-size: 18px;
+    border: .5px solid black;
+    background: none; }
 
+#forum-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-flow: column nowrap; }
+  #forum-container div.forum-header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+    background-color: #F5F5F5; }
+    #forum-container div.forum-header span {
+      width: 32%;
+      height: auto; }
+    #forum-container div.forum-header span:last-of-type {
+      width: 4%;
+      height: auto; }
+  #forum-container div.forum-row {
+    margin-top: 2px;
+    font-size: 14px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    border: none; }
+    #forum-container div.forum-row span {
+      border: none;
+      width: 32%;
+      height: auto;
+      display: flex;
+      flex-flow: row nowrap;
+      padding: 4px; }
+    #forum-container div.forum-row button {
+      width: 4%;
+      height: 30px;
+      font-weight: 100;
+      font-size: 18px;
+      border: .5px solid black;
+      background: none; }
+
+#loading {
+  display: inline-block;
+  background-color: magenta;
+  left: 50%;
+  top: 50%;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite; }
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg); } }
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg); } }
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -1856,60 +1913,23 @@ html:lang(ko) {
     opacity: 1; }
   to {
     opacity: 0; } }
-form.party {
-  margin: 20px; }
-  form.party label {
-    font-size: 14px; }
-  form.party button {
-    width: 30px;
-    height: auto;
-    font-weight: 100;
-    font-size: 18px;
-    border: .5px solid black;
-    background: none; }
-
-#forum-container {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-flow: column nowrap; }
-  #forum-container div.forum-header {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-flow: row nowrap;
-    margin-top: 20px;
-    font-size: 14px;
-    text-align: center;
-    background-color: #F5F5F5; }
-    #forum-container div.forum-header span {
-      width: 32%;
-      height: auto; }
-    #forum-container div.forum-header span:last-of-type {
-      width: 4%;
-      height: auto; }
-  #forum-container div.forum-row {
-    margin-top: 2px;
-    font-size: 14px;
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-flow: row nowrap;
-    border: none; }
-    #forum-container div.forum-row span {
-      border: none;
-      width: 32%;
-      height: auto;
-      display: flex;
-      flex-flow: row nowrap;
-      padding: 4px; }
-    #forum-container div.forum-row button {
-      width: 4%;
-      height: 30px;
-      font-weight: 100;
-      font-size: 18px;
-      border: .5px solid black;
-      background: none; }
+#backToTop {
+  z-index: 400;
+  position: fixed;
+  bottom: 4%;
+  right: 2%;
+  width: 40px;
+  height: 40px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
+  background-color: #F7FF8D;
+  text-align: center; }
+  #backToTop i {
+    padding: 8px;
+    color: white;
+    vertical-align: middle; }
 
 /*space*/
 /*style reset*/
@@ -1971,7 +1991,7 @@ a.link {
 /* 스타일링 */
 .header {
   z-index: 1000;
-  position: fixed;
+  background-color: #F7FF8D;
   top: 0;
   display: flex;
   flex-flow: row nowrap;
@@ -1979,24 +1999,44 @@ a.link {
   height: auto;
   min-width: 960px;
   min-height: auto; }
+  .header .logo {
+    width: 10%;
+    height: auto;
+    min-width: 100px;
+    min-height: auto; }
+    .header .logo > a {
+      margin-left: 20px;
+      margin-top: 20px;
+      font-weight: bold;
+      color: black; }
+  .header .nav {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    margin-right: 20px;
+    /* for develop */ }
+    .header .nav div {
+      margin-left: 14px;
+      /* for develop */ }
+      .header .nav div a {
+        font-weight: bold;
+        color: black; }
 
-.logo {
-  width: 10%;
-  height: auto;
-  min-width: 100px;
-  min-height: auto; }
-  .logo > a {
-    margin-left: 20px;
-    margin-top: 20px;
-    font-weight: bold;
-    color: black; }
-
-.menu {
-  width: 180px;
-  height: auto;
+.fixed-menu {
   position: fixed;
-  left: 1%;
-  top: 38%; }
+  margin: 0 auto;
+  width: 780px;
+  height: 40px;
+  display: flex;
+  flex-flow: row nowrap;
+  background-color: #F5F5F5; }
+  .fixed-menu div {
+    width: 200px;
+    height: 100%;
+    background-color: #E0E0E0;
+    text-align: center; }
 
 #wrap {
   z-index: 300;

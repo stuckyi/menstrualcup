@@ -5,26 +5,22 @@
 <!--<inter-scroll></inter-scroll>-->
 
 <header class="header">
-        <div class="logo">
-                <a routerLink="/home" routerLinkActive="active">안녕, 생리컵?</a>
-                <!--<login-buttons></login-buttons>-->
-        </div>
-        
-        <div class="menu">
-                <inter-accordion ></inter-accordion> <!-- menu -->
-                <a routerLink="/party" routerLinkActive="active">Party</a>
+        <div class="logo"> <a routerLink="/home" routerLinkActive="active">안녕, 생리컵?</a> </div>
+        <div class="nav">
+                <div><a routerLink="/home" routerLinkActive="active">생리컵이란</a></div>
+                <div><a routerLink="/usage" routerLinkActive="active">사용방법</a></div>
+                <div><a routerLink="/proscons" routerLinkActive="active">장단점</a></div>
+                <div><a routerLink="/product" routerLinkActive="active">고르는방법</a></div>
         </div>
 </header> 
 
 <div id="wrap">
         
         <section class="intro">
-                
                 <!-- intro area-->
         </section>
         
         <section class="contents">
-             
                 <router-outlet ></router-outlet>
         </section>
 
@@ -36,35 +32,35 @@
                         <!-- contents link -->
                         <div class="contents-link">
                                 <div>
-                                        <a href="#">생리컵이란?</a>
-                                        <a (click)="gotoItem('intro-1')" href="#">기본개념</a>
-                                        <a (click)="gotoItem('intro-2')" href="#">구조</a>
-                                        <a (click)="gotoItem('intro-3')" href="#">왜써요?</a>
-                                        <a (click)="gotoItem('intro-4')" href="#">생리컵의 역사</a>
+                                        <a href="/intro">생리컵이란?</a>
+                                        <a href="/intro#intro-1">기본개념</a>
+                                        <a href="/intro#intro-2">구조</a>
+                                        <a href="/intro#intro-3">왜써요?</a>
+                                        <a href="/intro#intro-4">생리컵의 역사</a>
                                 </div>
                                 <div>
-                                        <a href="#">작동원리</a>
-                                        <a (click)="gotoItem('principle-1')" href="#">기본개념</a>
-                                        <a (click)="gotoItem('principle-2')" href="#">생리혈의 양</a>
-                                        <a (click)="gotoItem('principle-3')" href="#">생리혈의 특성</a>
+                                        <a href="/principle">작동원리</a>
+                                        <a href="/principle#principle-1" >기본개념</a>
+                                        <a href="/principle#principle-2" >생리혈의 양</a>
+                                        <a href="/principle#principle-3" >생리혈의 특성</a>
                                 </div>
                                 <div>
-                                        <a href="#">사용법</a>
-                                        <a (click)="gotoItem('usage-1')" href="#">사용하는 단계</a>
-                                        <a (click)="gotoItem('usage-2')" href="#">사용과정 흐름도</a>
-                                        <a (click)="gotoItem('usage-3')" href="#">단계별 사용법</a>
+                                        <a href="/usage">사용법</a>
+                                        <a href="/usage#usage-1">사용하는 단계</a>
+                                        <a href="/usage#usage-2">사용과정 흐름도</a>
+                                        <a href="/usage#usage-3">단계별 사용법</a>
                                 </div>
                                 <div>
-                                        <a href="#">제품설명</a>
-                                        <a (click)="gotoItem('product-1')" href="#">제품설명1</a>
-                                        <a (click)="gotoItem('product-2')" href="#">나에게 맞는 생리컵찾기</a>
-                                        <a (click)="gotoItem('product-3')" href="#">생리컵 필터링 뷰</a>
+                                        <a href="/product">제품설명</a>
+                                        <a href="/product#product-1">제품설명1</a>
+                                        <a href="/product#product-2">나에게 맞는 생리컵찾기</a>
+                                        <a href="/product#product-3">생리컵 필터링 뷰</a>
                                 </div>
                                 <div>
-                                        <a href="#">장단점</a>
-                                        <a (click)="gotoItem('proscons-1')" href="#">장점</a>
-                                        <a (click)="gotoItem('proscons-2')" href="#">단점</a>
-                                        <a (click)="gotoItem('proscons-3')" href="#">상담이 필요해요</a>
+                                        <a href="/proscons">장단점</a>
+                                        <a href="/proscons#proscons-1">장점</a>
+                                        <a href="/proscons#proscons-2">단점</a>
+                                        <a href="/proscons#proscons-3">상담이 필요해요</a>
                                 </div>
                         </div>
 

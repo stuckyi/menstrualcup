@@ -8,8 +8,10 @@
 @import './parallax';
 @import './animation';
 @import './sidenav';
-@import './interaction/gototop';
 @import './forum';
+@import './interaction/loader/loader';
+@import './interaction/gototop';
+
 
 /*space*/
 
@@ -98,33 +100,58 @@ a.link {
 
 .header {
   z-index: 1000;
-  position: fixed;
+  // position: fixed;
+  background-color:$main-color;
+
   top: 0;
   @include flex(flex, row nowrap);
   @include size(100%, auto);
   @include min-size(960px, auto);
-}
 
-.logo {
-  @include size(10%, auto);
-  @include min-size(100px, auto);
-  
-  > a {
-    margin-left:20px; 
-    margin-top:20px;
-    font-weight: bold;
-    color: $fontCol-black;
+  .logo {
+    @include size(10%, auto);
+    @include min-size(100px, auto);
+
+    > a {
+      margin-left:20px; 
+      margin-top:20px;
+      font-weight: bold;
+      color: $fontCol-black;
+    }
+
+  }
+
+  .nav {
+    @include size(90%, auto);
+    @include flex(flex, row nowrap);
+    justify-content: flex-end;
+    margin-right:20px; /* for develop */
+
+    div {
+      margin-left: 14px; /* for develop */
+      a {
+        font-weight: bold;
+        color: $fontCol-black;
+      } 
+    }
   }
 }
 
-.menu {
-  @include size(180px, auto);
-  position: fixed;
-  left:1%;
+.fixed-menu {
+  position:fixed;
+  margin: 0 auto;
+  @include size(780px, 40px);
   
-  top:38%;
-}
+  @include flex(flex, row nowrap);
 
+  div {
+    @include size(200px, 100%);
+    background-color:$grey-300;
+    text-align:center;
+  }
+  background-color:$grey-100;
+
+}
 
 #wrap {
   z-index: 300;
@@ -491,5 +518,7 @@ a.link {
     width: 100%;
   }
 }
+
+
 
 

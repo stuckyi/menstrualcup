@@ -1,5 +1,12 @@
 import {
-        Component, OnInit, Input, trigger, state, style, transition, animate, keyframes} from '@angular/core';
+        Component, OnInit, Input, trigger, state, style, transition, animate, keyframes
+} from '@angular/core';
+        
+import { Router } from '@angular/router';
+import { Location } from '@angular/common';
+
+
+
 
 
 
@@ -43,6 +50,12 @@ export class AccordionComponent implements OnInit {
                 proscons:false
         };
 
+        constructor(
+                private router: Router,
+                private location: Location
+        ) { }
+
+
 
         
         ngOnInit(): void{
@@ -52,13 +65,17 @@ export class AccordionComponent implements OnInit {
         //depth2 목록 클릭시 발생하는 이벤트.
         //어떤 항목을 클릭했는지 AppComponent로 전달한다.
         gotoItem(clickname: string) {
+
+
+                
                 console.log(clickname);
-                let targetEl = document.getElementById(clickname);
-                console.log('targetEl', targetEl);
+                // let targetEl = document.getElementById(clickname);
+                // console.log('targetEl', targetEl);
                 
                 let targetY = document.getElementById(clickname).offsetTop;
                 
                 window.scrollTo(0, targetY);
+                
                 
         }
 

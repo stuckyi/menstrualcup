@@ -1,6 +1,7 @@
 <div id="sideNav" >
 
         <!-- intro depth1 -->
+        
         <div class="index" (click)="onIndex('intro')">
                 <a routerLink="/intro" routerLinkActive="active">
                         <span [class.selected]="indexState.intro">생리컵이란?</span>
@@ -13,10 +14,18 @@
         <div class="item-container" >
 
                 <!-- intro 2-1 -->
+<!--
                 <div class="items" 
                         (click)="gotoItem('intro-1')"
                         [@selectedIndex]="selectedIndex" *ngIf="indexState.intro">
-                                <span>생리컵이란?</span>
+-->
+
+                <div class="items" 
+                        [@selectedIndex]="selectedIndex" *ngIf="indexState.intro">
+                        
+                        <span>생리컵이란?</span>
+                        
+                                
                 </div>
 
                 <!-- intro 2-2 -->
