@@ -1,10 +1,10 @@
-
-
-<div class="fixed-menu">
-        <div><a>넣기</a></div>
-        <div><a>빼기</a></div>
-        <div><a>세척 및 보관</a></div>
+<div scroller class="fixed-menu">
+        <!--<div><a routerLink="/home" routerLinkActive="active">생리컵이란</a></div>-->
+        <div (click)="onClick('in')" [class.selected]="selectedSubNav === 'in'"><a >넣기</a></div>
+        <div  (click)="onClick('out')" [class.selected]="selectedSubNav === 'out'"><a >빼기</a></div>
+        <div  (click)="onClick('keep')" [class.selected]="selectedSubNav === 'keep'"><a>세척 및 보관</a></div>
 </div>
+
 <!-- 인트로 -->
 <div class="text">
         

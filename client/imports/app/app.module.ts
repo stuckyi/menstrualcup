@@ -1,23 +1,10 @@
-
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 //root
-import { AppRoutingModule, ROUTES_PROVIDERS} from './app-routing.module'; 
+import { AppRoutingModule } from './app-routing.module'; 
 import { AppComponent } from './app.component';
-
-
-//mongo
-import { Parties } from '../../../both/collections/parties.collection';
-import { PARTIES_DECLARATIONS } from './parties';
-
-
-//packages
-import { AccountsModule } from 'angular2-meteor-accounts-ui';
-import { Ng2PaginationModule } from 'ng2-pagination';
-
-
 
 import { INTERACTION_DECLARATIONS } from './interaction';
 import { UTIL_DECLARATIONS } from './util';
@@ -36,8 +23,7 @@ import { ProsconsComponent } from './proscons/proscons.component';
 import { UI_DECLARATIONS } from './ui';
 
 
-//forum
-import { ForumComponent } from './forum/forum.component';
+import { ScrollDirective } from './interaction/scroll/scroll.directive';
 
 
 @NgModule({
@@ -45,9 +31,7 @@ import { ForumComponent } from './forum/forum.component';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule,
-    AccountsModule,
-    Ng2PaginationModule
+    AppRoutingModule
   ],
   declarations: [
     AppComponent,
@@ -61,12 +45,9 @@ import { ForumComponent } from './forum/forum.component';
     ...UI_DECLARATIONS,
     ...UTIL_DECLARATIONS,
     ...INTERACTION_DECLARATIONS,
-    ...PARTIES_DECLARATIONS,
-    ForumComponent
+    ScrollDirective
   ],
-  providers: [
-    ...ROUTES_PROVIDERS
-  ],
+  providers: [],
   bootstrap: [
     AppComponent
   ]

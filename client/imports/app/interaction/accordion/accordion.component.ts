@@ -65,18 +65,10 @@ export class AccordionComponent implements OnInit {
         //depth2 목록 클릭시 발생하는 이벤트.
         //어떤 항목을 클릭했는지 AppComponent로 전달한다.
         gotoItem(clickname: string) {
-
-
-                
                 console.log(clickname);
-                // let targetEl = document.getElementById(clickname);
-                // console.log('targetEl', targetEl);
                 
                 let targetY = document.getElementById(clickname).offsetTop;
-                
                 window.scrollTo(0, targetY);
-                
-                
         }
 
         onIndex(indexName: string) {
